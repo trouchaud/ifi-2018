@@ -1,0 +1,91 @@
+body{
+    background:url("../images/ustl_background.png");
+    background-repeat: repeat-x;
+    background-position: top;
+}
+
+.ustl_aside_logo {
+    position: fixed;
+    width: 150px;
+    height: 60px;
+    z-index: 30;
+    right: 120px;
+    bottom: 50px;
+    -webkit-user-select: none;
+    background-image: url("../images/UL-ROSE-dark-2014.svg");
+    background-size:100%;
+    background-repeat: no-repeat;
+}
+
+.reveal section img {
+    border: none;
+    box-shadow: none;
+}
+
+
+.slide-with-bg .ustl_aside_logo,
+.slide-with-bg-light .ustl_aside_logo{
+    visibility: hidden;
+}
+
+.slide-with-bg .controls,
+.slide-with-bg-light .controls{
+    visibility: hidden;
+}
+
+.slide-with-bg h2 {
+    background-color: white;
+    width: 100%;
+    bottom: 20px;
+    text-align: left;
+    padding-left: 20px;
+    position: absolute;
+}
+
+.slide-with-bg-light h2 {
+    background-color: #5E5E5F;
+    width: 100%;
+    bottom: 20px;
+    text-align: left;
+    padding-left: 20px;
+    position: absolute;
+}
+
+.slide-with-bg ul,
+.slide-with-bg-light ul {
+    position: absolute;
+    bottom: 120px;
+    left: 10px;
+}
+
+.slide-with-bg ul li{
+    background-color: rgba(255,255,255,0.8);
+    width: fit-content;
+    list-style: none;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+.slide-with-bg-light ul li{
+    background-color: rgba(94,94,95,0.8);
+    width: fit-content;
+    list-style: none;
+    margin-bottom: 5px;
+    padding: 5px;
+    color: white;
+}
+
+/**
+ * Alignement centré du contenu des slides
+ * Permet de supprimer le flag 'center: true' de reveal, qui est calculé en JS, et ne
+ * gère pas bien les changements de height entre les slides....
+ */
+.reveal.slide .slides > section, .reveal.slide .slides > section > section {
+    min-height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    position: absolute !important;
+    top: 0 !important;
+    align-items: center !important;
+}
