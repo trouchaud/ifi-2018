@@ -17,7 +17,7 @@ OpenJDK Runtime Environment 18.9 (build 11.0.1+13)
 OpenJDK 64-Bit Server VM 18.9 (build 11.0.1+13, mixed mode)
 
 $ echo $JAVA_HOME
-/opt/jdk-11.0.1/bin/java
+/opt/jdk-11.0.1
 ----
 
 [IMPORTANT]
@@ -56,6 +56,11 @@ Si Maven n'est pas installé, suivre la procédure sur http://maven.apache.org/d
 
 Modifier le fichier `conf/settings.xml` pour appliquer la configuration du proxy si besoin.
 
+[NOTE]
+====
+La configuration du proxy n'est plus nécessaire si on utilise les PC de la salle TP.
+====
+
 .configuration du proxy de l'université
 [source, xml]
 ----
@@ -82,6 +87,20 @@ Modifier le fichier `conf/settings.xml` pour appliquer la configuration du proxy
     </proxies>
 </settings>
 ----
+
+=== Configuration du localRepository
+
+La création d'un lien symbolique en remplacement du répertoire local maven permet de sauver votre quota !
+
+[source,bash]
+----
+$ mkdir -p ~/.m2/repository <1>
+$ mkdir -p /local/<username>/.m2/repository <2>
+$ ln -s /local/<username>/.m2/repository ~/.m2/repository <3>
+----
+<1> Création du répertoire local maven (dans le home par défaut)
+<2> Création d'un répertoire sur le disque /local (non soumis à quota)
+<3> Création du lien symbolique
 
 == Initialisation du projet
 
