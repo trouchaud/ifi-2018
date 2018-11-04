@@ -1,0 +1,2367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.5">
+<title>IFI JEE - TP 2 - Handcraft</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<style>
+/* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
+/* Remove comment around @import statement below when using as a custom stylesheet */
+/*@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700";*/
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}
+audio,canvas,video{display:inline-block}
+audio:not([controls]){display:none;height:0}
+[hidden],template{display:none}
+script{display:none!important}
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+a{background:transparent}
+a:focus{outline:thin dotted}
+a:active,a:hover{outline:0}
+h1{font-size:2em;margin:.67em 0}
+abbr[title]{border-bottom:1px dotted}
+b,strong{font-weight:bold}
+dfn{font-style:italic}
+hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}
+mark{background:#ff0;color:#000}
+code,kbd,pre,samp{font-family:monospace;font-size:1em}
+pre{white-space:pre-wrap}
+q{quotes:"\201C" "\201D" "\2018" "\2019"}
+small{font-size:80%}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-.5em}
+sub{bottom:-.25em}
+img{border:0}
+svg:not(:root){overflow:hidden}
+figure{margin:0}
+fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
+legend{border:0;padding:0}
+button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}
+button,input{line-height:normal}
+button,select{text-transform:none}
+button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}
+button[disabled],html input[disabled]{cursor:default}
+input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}
+input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}
+input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+textarea{overflow:auto;vertical-align:top}
+table{border-collapse:collapse;border-spacing:0}
+*,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
+html,body{font-size:100%}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
+a:hover{cursor:pointer}
+img,object,embed{max-width:100%;height:auto}
+object,embed{height:100%}
+img{-ms-interpolation-mode:bicubic}
+.left{float:left!important}
+.right{float:right!important}
+.text-left{text-align:left!important}
+.text-right{text-align:right!important}
+.text-center{text-align:center!important}
+.text-justify{text-align:justify!important}
+.hide{display:none}
+img,object,svg{display:inline-block;vertical-align:middle}
+textarea{height:auto;min-height:50px}
+select{width:100%}
+.center{margin-left:auto;margin-right:auto}
+.spread{width:100%}
+p.lead,.paragraph.lead>p,#preamble>.sectionbody>.paragraph:first-of-type p{font-size:1.21875em;line-height:1.6}
+.subheader,.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{line-height:1.45;color:#7a2518;font-weight:400;margin-top:0;margin-bottom:.25em}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0;direction:ltr}
+a{color:#2156a5;text-decoration:underline;line-height:inherit}
+a:hover,a:focus{color:#1d4b8f}
+a img{border:none}
+p{font-family:inherit;font-weight:400;font-size:1em;line-height:1.6;margin-bottom:1.25em;text-rendering:optimizeLegibility}
+p aside{font-size:.875em;line-height:1.35;font-style:italic}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{font-family:"Open Sans","DejaVu Sans",sans-serif;font-weight:300;font-style:normal;color:#ba3925;text-rendering:optimizeLegibility;margin-top:1em;margin-bottom:.5em;line-height:1.0125em}
+h1 small,h2 small,h3 small,#toctitle small,.sidebarblock>.content>.title small,h4 small,h5 small,h6 small{font-size:60%;color:#e99b8f;line-height:0}
+h1{font-size:2.125em}
+h2{font-size:1.6875em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.375em}
+h4,h5{font-size:1.125em}
+h6{font-size:1em}
+hr{border:solid #ddddd8;border-width:1px 0 0;clear:both;margin:1.25em 0 1.1875em;height:0}
+em,i{font-style:italic;line-height:inherit}
+strong,b{font-weight:bold;line-height:inherit}
+small{font-size:60%;line-height:inherit}
+code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;color:rgba(0,0,0,.9)}
+ul,ol,dl{font-size:1em;line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
+ul,ol,ul.no-bullet,ol.no-bullet{margin-left:1.5em}
+ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0;font-size:1em}
+ul.square li ul,ul.circle li ul,ul.disc li ul{list-style:inherit}
+ul.square{list-style-type:square}
+ul.circle{list-style-type:circle}
+ul.disc{list-style-type:disc}
+ul.no-bullet{list-style:none}
+ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
+dl dt{margin-bottom:.3125em;font-weight:bold}
+dl dd{margin-bottom:1.25em}
+abbr,acronym{text-transform:uppercase;font-size:90%;color:rgba(0,0,0,.8);border-bottom:1px dotted #ddd;cursor:help}
+abbr{text-transform:none}
+blockquote{margin:0 0 1.25em;padding:.5625em 1.25em 0 1.1875em;border-left:1px solid #ddd}
+blockquote cite{display:block;font-size:.9375em;color:rgba(0,0,0,.6)}
+blockquote cite:before{content:"\2014 \0020"}
+blockquote cite a,blockquote cite a:visited{color:rgba(0,0,0,.6)}
+blockquote,blockquote p{line-height:1.6;color:rgba(0,0,0,.85)}
+@media only screen and (min-width:768px){h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2}
+h1{font-size:2.75em}
+h2{font-size:2.3125em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.6875em}
+h4{font-size:1.4375em}}
+table{background:#fff;margin-bottom:1.25em;border:solid 1px #dedede}
+table thead,table tfoot{background:#f7f8f7;font-weight:bold}
+table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:.5em .625em .625em;font-size:inherit;color:rgba(0,0,0,.8);text-align:left}
+table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
+table tr.even,table tr.alt,table tr:nth-of-type(even){background:#f8f8f7}
+table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{display:table-cell;line-height:1.6}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
+h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
+.clearfix:before,.clearfix:after,.float-group:before,.float-group:after{content:" ";display:table}
+.clearfix:after,.float-group:after{clear:both}
+*:not(pre)>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background-color:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed;word-wrap:break-word}
+*:not(pre)>code.nobreak{word-wrap:normal}
+*:not(pre)>code.nowrap{white-space:nowrap}
+pre,pre>code{line-height:1.45;color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;text-rendering:optimizeSpeed}
+em em{font-style:normal}
+strong strong{font-weight:400}
+.keyseq{color:rgba(51,51,51,.8)}
+kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background-color:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em white inset;box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em #fff inset;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
+.keyseq kbd:first-child{margin-left:0}
+.keyseq kbd:last-child{margin-right:0}
+.menuseq,.menu{color:rgba(0,0,0,.8)}
+b.button:before,b.button:after{position:relative;top:-1px;font-weight:400}
+b.button:before{content:"[";padding:0 3px 0 2px}
+b.button:after{content:"]";padding:0 2px 0 3px}
+p a>code:hover{color:rgba(0,0,0,.9)}
+#header,#content,#footnotes,#footer{width:100%;margin-left:auto;margin-right:auto;margin-top:0;margin-bottom:0;max-width:62.5em;*zoom:1;position:relative;padding-left:.9375em;padding-right:.9375em}
+#header:before,#header:after,#content:before,#content:after,#footnotes:before,#footnotes:after,#footer:before,#footer:after{content:" ";display:table}
+#header:after,#content:after,#footnotes:after,#footer:after{clear:both}
+#content{margin-top:1.25em}
+#content:before{content:none}
+#header>h1:first-child{color:rgba(0,0,0,.85);margin-top:2.25rem;margin-bottom:0}
+#header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #ddddd8}
+#header>h1:only-child,body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #ddddd8;padding-bottom:8px}
+#header .details{border-bottom:1px solid #ddddd8;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:-ms-flexbox;display:-webkit-flex;display:flex;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;flex-flow:row wrap}
+#header .details span:first-child{margin-left:-.125em}
+#header .details span.email a{color:rgba(0,0,0,.85)}
+#header .details br{display:none}
+#header .details br+span:before{content:"\00a0\2013\00a0"}
+#header .details br+span.author:before{content:"\00a0\22c5\00a0";color:rgba(0,0,0,.85)}
+#header .details br+span#revremark:before{content:"\00a0|\00a0"}
+#header #revnumber{text-transform:capitalize}
+#header #revnumber:after{content:"\00a0"}
+#content>h1:first-child:not([class]){color:rgba(0,0,0,.85);border-bottom:1px solid #ddddd8;padding-bottom:8px;margin-top:0;padding-top:1rem;margin-bottom:1.25rem}
+#toc{border-bottom:1px solid #efefed;padding-bottom:.5em}
+#toc>ul{margin-left:.125em}
+#toc ul.sectlevel0>li>a{font-style:italic}
+#toc ul.sectlevel0 ul.sectlevel1{margin:.5em 0}
+#toc ul{font-family:"Open Sans","DejaVu Sans",sans-serif;list-style-type:none}
+#toc li{line-height:1.3334;margin-top:.3334em}
+#toc a{text-decoration:none}
+#toc a:active{text-decoration:underline}
+#toctitle{color:#7a2518;font-size:1.2em}
+@media only screen and (min-width:768px){#toctitle{font-size:1.375em}
+body.toc2{padding-left:15em;padding-right:0}
+#toc.toc2{margin-top:0!important;background-color:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #efefed;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
+#toc.toc2 #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
+#toc.toc2>ul{font-size:.9em;margin-bottom:0}
+#toc.toc2 ul ul{margin-left:0;padding-left:1em}
+#toc.toc2 ul.sectlevel0 ul.sectlevel1{padding-left:0;margin-top:.5em;margin-bottom:.5em}
+body.toc2.toc-right{padding-left:0;padding-right:15em}
+body.toc2.toc-right #toc.toc2{border-right-width:0;border-left:1px solid #efefed;left:auto;right:0}}
+@media only screen and (min-width:1280px){body.toc2{padding-left:20em;padding-right:0}
+#toc.toc2{width:20em}
+#toc.toc2 #toctitle{font-size:1.375em}
+#toc.toc2>ul{font-size:.95em}
+#toc.toc2 ul ul{padding-left:1.25em}
+body.toc2.toc-right{padding-left:0;padding-right:20em}}
+#content #toc{border-style:solid;border-width:1px;border-color:#e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;-webkit-border-radius:4px;border-radius:4px}
+#content #toc>:first-child{margin-top:0}
+#content #toc>:last-child{margin-bottom:0}
+#footer{max-width:100%;background-color:rgba(0,0,0,.8);padding:1.25em}
+#footer-text{color:rgba(255,255,255,.8);line-height:1.44}
+.sect1{padding-bottom:.625em}
+@media only screen and (min-width:768px){.sect1{padding-bottom:1.25em}}
+.sect1+.sect1{border-top:1px solid #efefed}
+#content h1>a.anchor,h2>a.anchor,h3>a.anchor,#toctitle>a.anchor,.sidebarblock>.content>.title>a.anchor,h4>a.anchor,h5>a.anchor,h6>a.anchor{position:absolute;z-index:1001;width:1.5ex;margin-left:-1.5ex;display:block;text-decoration:none!important;visibility:hidden;text-align:center;font-weight:400}
+#content h1>a.anchor:before,h2>a.anchor:before,h3>a.anchor:before,#toctitle>a.anchor:before,.sidebarblock>.content>.title>a.anchor:before,h4>a.anchor:before,h5>a.anchor:before,h6>a.anchor:before{content:"\00A7";font-size:.85em;display:block;padding-top:.1em}
+#content h1:hover>a.anchor,#content h1>a.anchor:hover,h2:hover>a.anchor,h2>a.anchor:hover,h3:hover>a.anchor,#toctitle:hover>a.anchor,.sidebarblock>.content>.title:hover>a.anchor,h3>a.anchor:hover,#toctitle>a.anchor:hover,.sidebarblock>.content>.title>a.anchor:hover,h4:hover>a.anchor,h4>a.anchor:hover,h5:hover>a.anchor,h5>a.anchor:hover,h6:hover>a.anchor,h6>a.anchor:hover{visibility:visible}
+#content h1>a.link,h2>a.link,h3>a.link,#toctitle>a.link,.sidebarblock>.content>.title>a.link,h4>a.link,h5>a.link,h6>a.link{color:#ba3925;text-decoration:none}
+#content h1>a.link:hover,h2>a.link:hover,h3>a.link:hover,#toctitle>a.link:hover,.sidebarblock>.content>.title>a.link:hover,h4>a.link:hover,h5>a.link:hover,h6>a.link:hover{color:#a53221}
+.audioblock,.imageblock,.literalblock,.listingblock,.stemblock,.videoblock{margin-bottom:1.25em}
+.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{text-rendering:optimizeLegibility;text-align:left;font-family:"Noto Serif","DejaVu Serif",serif;font-size:1rem;font-style:italic}
+table.tableblock>caption.title{white-space:nowrap;overflow:visible;max-width:0}
+.paragraph.lead>p,#preamble>.sectionbody>.paragraph:first-of-type p{color:rgba(0,0,0,.85)}
+table.tableblock #preamble>.sectionbody>.paragraph:first-of-type p{font-size:inherit}
+.admonitionblock>table{border-collapse:separate;border:0;background:none;width:100%}
+.admonitionblock>table td.icon{text-align:center;width:80px}
+.admonitionblock>table td.icon img{max-width:none}
+.admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
+.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #ddddd8;color:rgba(0,0,0,.6)}
+.admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
+.exampleblock>.content{border-style:solid;border-width:1px;border-color:#e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;-webkit-border-radius:4px;border-radius:4px}
+.exampleblock>.content>:first-child{margin-top:0}
+.exampleblock>.content>:last-child{margin-bottom:0}
+.sidebarblock{border-style:solid;border-width:1px;border-color:#e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;-webkit-border-radius:4px;border-radius:4px}
+.sidebarblock>:first-child{margin-top:0}
+.sidebarblock>:last-child{margin-bottom:0}
+.sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
+.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
+.literalblock pre,.listingblock pre:not(.highlight),.listingblock pre[class="highlight"],.listingblock pre[class^="highlight "],.listingblock pre.CodeRay,.listingblock pre.prettyprint{background:#f7f7f8}
+.sidebarblock .literalblock pre,.sidebarblock .listingblock pre:not(.highlight),.sidebarblock .listingblock pre[class="highlight"],.sidebarblock .listingblock pre[class^="highlight "],.sidebarblock .listingblock pre.CodeRay,.sidebarblock .listingblock pre.prettyprint{background:#f2f1f1}
+.literalblock pre,.literalblock pre[class],.listingblock pre,.listingblock pre[class]{-webkit-border-radius:4px;border-radius:4px;word-wrap:break-word;padding:1em;font-size:.8125em}
+.literalblock pre.nowrap,.literalblock pre[class].nowrap,.listingblock pre.nowrap,.listingblock pre[class].nowrap{overflow-x:auto;white-space:pre;word-wrap:normal}
+@media only screen and (min-width:768px){.literalblock pre,.literalblock pre[class],.listingblock pre,.listingblock pre[class]{font-size:.90625em}}
+@media only screen and (min-width:1280px){.literalblock pre,.literalblock pre[class],.listingblock pre,.listingblock pre[class]{font-size:1em}}
+.literalblock.output pre{color:#f7f7f8;background-color:rgba(0,0,0,.9)}
+.listingblock pre.highlightjs{padding:0}
+.listingblock pre.highlightjs>code{padding:1em;-webkit-border-radius:4px;border-radius:4px}
+.listingblock pre.prettyprint{border-width:0}
+.listingblock>.content{position:relative}
+.listingblock code[data-lang]:before{display:none;content:attr(data-lang);position:absolute;font-size:.75em;top:.425rem;right:.5rem;line-height:1;text-transform:uppercase;color:#999}
+.listingblock:hover code[data-lang]:before{display:block}
+.listingblock.terminal pre .command:before{content:attr(data-prompt);padding-right:.5em;color:#999}
+.listingblock.terminal pre .command:not([data-prompt]):before{content:"$"}
+table.pyhltable{border-collapse:separate;border:0;margin-bottom:0;background:none}
+table.pyhltable td{vertical-align:top;padding-top:0;padding-bottom:0;line-height:1.45}
+table.pyhltable td.code{padding-left:.75em;padding-right:0}
+pre.pygments .lineno,table.pyhltable td:not(.code){color:#999;padding-left:0;padding-right:.5em;border-right:1px solid #ddddd8}
+pre.pygments .lineno{display:inline-block;margin-right:.25em}
+table.pyhltable .linenodiv{background:none!important;padding-right:0!important}
+.quoteblock{margin:0 1em 1.25em 1.5em;display:table}
+.quoteblock>.title{margin-left:-1.5em;margin-bottom:.75em}
+.quoteblock blockquote,.quoteblock blockquote p{color:rgba(0,0,0,.85);font-size:1.15rem;line-height:1.75;word-spacing:.1em;letter-spacing:0;font-style:italic;text-align:justify}
+.quoteblock blockquote{margin:0;padding:0;border:0}
+.quoteblock blockquote:before{content:"\201c";float:left;font-size:2.75em;font-weight:bold;line-height:.6em;margin-left:-.6em;color:#7a2518;text-shadow:0 1px 2px rgba(0,0,0,.1)}
+.quoteblock blockquote>.paragraph:last-child p{margin-bottom:0}
+.quoteblock .attribution{margin-top:.5em;margin-right:.5ex;text-align:right}
+.quoteblock .quoteblock{margin-left:0;margin-right:0;padding:.5em 0;border-left:3px solid rgba(0,0,0,.6)}
+.quoteblock .quoteblock blockquote{padding:0 0 0 .75em}
+.quoteblock .quoteblock blockquote:before{display:none}
+.verseblock{margin:0 1em 1.25em 1em}
+.verseblock pre{font-family:"Open Sans","DejaVu Sans",sans;font-size:1.15rem;color:rgba(0,0,0,.85);font-weight:300;text-rendering:optimizeLegibility}
+.verseblock pre strong{font-weight:400}
+.verseblock .attribution{margin-top:1.25rem;margin-left:.5ex}
+.quoteblock .attribution,.verseblock .attribution{font-size:.9375em;line-height:1.45;font-style:italic}
+.quoteblock .attribution br,.verseblock .attribution br{display:none}
+.quoteblock .attribution cite,.verseblock .attribution cite{display:block;letter-spacing:-.025em;color:rgba(0,0,0,.6)}
+.quoteblock.abstract{margin:0 0 1.25em 0;display:block}
+.quoteblock.abstract blockquote,.quoteblock.abstract blockquote p{text-align:left;word-spacing:0}
+.quoteblock.abstract blockquote:before,.quoteblock.abstract blockquote p:first-of-type:before{display:none}
+table.tableblock{max-width:100%;border-collapse:separate}
+table.tableblock td>.paragraph:last-child p>p:last-child,table.tableblock th>p:last-child,table.tableblock td>p:last-child{margin-bottom:0}
+table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
+table.grid-all th.tableblock,table.grid-all td.tableblock{border-width:0 1px 1px 0}
+table.grid-all tfoot>tr>th.tableblock,table.grid-all tfoot>tr>td.tableblock{border-width:1px 1px 0 0}
+table.grid-cols th.tableblock,table.grid-cols td.tableblock{border-width:0 1px 0 0}
+table.grid-all *>tr>.tableblock:last-child,table.grid-cols *>tr>.tableblock:last-child{border-right-width:0}
+table.grid-rows th.tableblock,table.grid-rows td.tableblock{border-width:0 0 1px 0}
+table.grid-all tbody>tr:last-child>th.tableblock,table.grid-all tbody>tr:last-child>td.tableblock,table.grid-all thead:last-child>tr>th.tableblock,table.grid-rows tbody>tr:last-child>th.tableblock,table.grid-rows tbody>tr:last-child>td.tableblock,table.grid-rows thead:last-child>tr>th.tableblock{border-bottom-width:0}
+table.grid-rows tfoot>tr>th.tableblock,table.grid-rows tfoot>tr>td.tableblock{border-width:1px 0 0 0}
+table.frame-all{border-width:1px}
+table.frame-sides{border-width:0 1px}
+table.frame-topbot{border-width:1px 0}
+th.halign-left,td.halign-left{text-align:left}
+th.halign-right,td.halign-right{text-align:right}
+th.halign-center,td.halign-center{text-align:center}
+th.valign-top,td.valign-top{vertical-align:top}
+th.valign-bottom,td.valign-bottom{vertical-align:bottom}
+th.valign-middle,td.valign-middle{vertical-align:middle}
+table thead th,table tfoot th{font-weight:bold}
+tbody tr th{display:table-cell;line-height:1.6;background:#f7f8f7}
+tbody tr th,tbody tr th p,tfoot tr th,tfoot tr th p{color:rgba(0,0,0,.8);font-weight:bold}
+p.tableblock>code:only-child{background:none;padding:0}
+p.tableblock{font-size:1em}
+td>div.verse{white-space:pre}
+ol{margin-left:1.75em}
+ul li ol{margin-left:1.5em}
+dl dd{margin-left:1.125em}
+dl dd:last-child,dl dd:last-child>:last-child{margin-bottom:0}
+ol>li p,ul>li p,ul dd,ol dd,.olist .olist,.ulist .ulist,.ulist .olist,.olist .ulist{margin-bottom:.625em}
+ul.unstyled,ol.unnumbered,ul.checklist,ul.none{list-style-type:none}
+ul.unstyled,ol.unnumbered,ul.checklist{margin-left:.625em}
+ul.checklist li>p:first-child>.fa-square-o:first-child,ul.checklist li>p:first-child>.fa-check-square-o:first-child{width:1em;font-size:.85em}
+ul.checklist li>p:first-child>input[type="checkbox"]:first-child{width:1em;position:relative;top:1px}
+ul.inline{margin:0 auto .625em auto;margin-left:-1.375em;margin-right:0;padding:0;list-style:none;overflow:hidden}
+ul.inline>li{list-style:none;float:left;margin-left:1.375em;display:block}
+ul.inline>li>*{display:block}
+.unstyled dl dt{font-weight:400;font-style:normal}
+ol.arabic{list-style-type:decimal}
+ol.decimal{list-style-type:decimal-leading-zero}
+ol.loweralpha{list-style-type:lower-alpha}
+ol.upperalpha{list-style-type:upper-alpha}
+ol.lowerroman{list-style-type:lower-roman}
+ol.upperroman{list-style-type:upper-roman}
+ol.lowergreek{list-style-type:lower-greek}
+.hdlist>table,.colist>table{border:0;background:none}
+.hdlist>table>tbody>tr,.colist>table>tbody>tr{background:none}
+td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
+td.hdlist1{font-weight:bold;padding-bottom:1.25em}
+.literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
+.colist>table tr>td:first-of-type{padding:0 .75em;line-height:1}
+.colist>table tr>td:last-of-type{padding:.25em 0}
+.thumb,.th{line-height:0;display:inline-block;border:solid 4px #fff;-webkit-box-shadow:0 0 0 1px #ddd;box-shadow:0 0 0 1px #ddd}
+.imageblock.left,.imageblock[style*="float: left"]{margin:.25em .625em 1.25em 0}
+.imageblock.right,.imageblock[style*="float: right"]{margin:.25em 0 1.25em .625em}
+.imageblock>.title{margin-bottom:0}
+.imageblock.thumb,.imageblock.th{border-width:6px}
+.imageblock.thumb>.title,.imageblock.th>.title{padding:0 .125em}
+.image.left,.image.right{margin-top:.25em;margin-bottom:.25em;display:inline-block;line-height:0}
+.image.left{margin-right:.625em}
+.image.right{margin-left:.625em}
+a.image{text-decoration:none;display:inline-block}
+a.image object{pointer-events:none}
+sup.footnote,sup.footnoteref{font-size:.875em;position:static;vertical-align:super}
+sup.footnote a,sup.footnoteref a{text-decoration:none}
+sup.footnote a:active,sup.footnoteref a:active{text-decoration:underline}
+#footnotes{padding-top:.75em;padding-bottom:.75em;margin-bottom:.625em}
+#footnotes hr{width:20%;min-width:6.25em;margin:-.25em 0 .75em 0;border-width:1px 0 0 0}
+#footnotes .footnote{padding:0 .375em 0 .225em;line-height:1.3334;font-size:.875em;margin-left:1.2em;text-indent:-1.05em;margin-bottom:.2em}
+#footnotes .footnote a:first-of-type{font-weight:bold;text-decoration:none}
+#footnotes .footnote:last-of-type{margin-bottom:0}
+#content #footnotes{margin-top:-.625em;margin-bottom:0;padding:.75em 0}
+.gist .file-data>table{border:0;background:#fff;width:100%;margin-bottom:0}
+.gist .file-data>table td.line-data{width:99%}
+div.unbreakable{page-break-inside:avoid}
+.big{font-size:larger}
+.small{font-size:smaller}
+.underline{text-decoration:underline}
+.overline{text-decoration:overline}
+.line-through{text-decoration:line-through}
+.aqua{color:#00bfbf}
+.aqua-background{background-color:#00fafa}
+.black{color:#000}
+.black-background{background-color:#000}
+.blue{color:#0000bf}
+.blue-background{background-color:#0000fa}
+.fuchsia{color:#bf00bf}
+.fuchsia-background{background-color:#fa00fa}
+.gray{color:#606060}
+.gray-background{background-color:#7d7d7d}
+.green{color:#006000}
+.green-background{background-color:#007d00}
+.lime{color:#00bf00}
+.lime-background{background-color:#00fa00}
+.maroon{color:#600000}
+.maroon-background{background-color:#7d0000}
+.navy{color:#000060}
+.navy-background{background-color:#00007d}
+.olive{color:#606000}
+.olive-background{background-color:#7d7d00}
+.purple{color:#600060}
+.purple-background{background-color:#7d007d}
+.red{color:#bf0000}
+.red-background{background-color:#fa0000}
+.silver{color:#909090}
+.silver-background{background-color:#bcbcbc}
+.teal{color:#006060}
+.teal-background{background-color:#007d7d}
+.white{color:#bfbfbf}
+.white-background{background-color:#fafafa}
+.yellow{color:#bfbf00}
+.yellow-background{background-color:#fafa00}
+span.icon>.fa{cursor:default}
+.admonitionblock td.icon [class^="fa icon-"]{font-size:2.5em;text-shadow:1px 1px 2px rgba(0,0,0,.5);cursor:default}
+.admonitionblock td.icon .icon-note:before{content:"\f05a";color:#19407c}
+.admonitionblock td.icon .icon-tip:before{content:"\f0eb";text-shadow:1px 1px 2px rgba(155,155,0,.8);color:#111}
+.admonitionblock td.icon .icon-warning:before{content:"\f071";color:#bf6900}
+.admonitionblock td.icon .icon-caution:before{content:"\f06d";color:#bf3400}
+.admonitionblock td.icon .icon-important:before{content:"\f06a";color:#bf0000}
+.conum[data-value]{display:inline-block;color:#fff!important;background-color:rgba(0,0,0,.8);-webkit-border-radius:100px;border-radius:100px;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
+.conum[data-value] *{color:#fff!important}
+.conum[data-value]+b{display:none}
+.conum[data-value]:after{content:attr(data-value)}
+pre .conum[data-value]{position:relative;top:-.125em}
+b.conum *{color:inherit!important}
+.conum:not([data-value]):empty{display:none}
+dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
+h1,h2,p,td.content,span.alt{letter-spacing:-.01em}
+p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
+p,blockquote,dt,td.content,span.alt{font-size:1.0625rem}
+p{margin-bottom:1.25rem}
+.sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
+.exampleblock>.content{background-color:#fffef7;border-color:#e0e0dc;-webkit-box-shadow:0 1px 4px #e0e0dc;box-shadow:0 1px 4px #e0e0dc}
+.print-only{display:none!important}
+@media print{@page{margin:1.25cm .75cm}
+*{-webkit-box-shadow:none!important;box-shadow:none!important;text-shadow:none!important}
+a{color:inherit!important;text-decoration:underline!important}
+a.bare,a[href^="#"],a[href^="mailto:"]{text-decoration:none!important}
+a[href^="http:"]:not(.bare):after,a[href^="https:"]:not(.bare):after{content:"(" attr(href) ")";display:inline-block;font-size:.875em;padding-left:.25em}
+abbr[title]:after{content:" (" attr(title) ")"}
+pre,blockquote,tr,img,object,svg{page-break-inside:avoid}
+thead{display:table-header-group}
+svg{max-width:100%}
+p,blockquote,dt,td.content{font-size:1em;orphans:3;widows:3}
+h2,h3,#toctitle,.sidebarblock>.content>.title{page-break-after:avoid}
+#toc,.sidebarblock,.exampleblock>.content{background:none!important}
+#toc{border-bottom:1px solid #ddddd8!important;padding-bottom:0!important}
+.sect1{padding-bottom:0!important}
+.sect1+.sect1{border:0!important}
+#header>h1:first-child{margin-top:1.25rem}
+body.book #header{text-align:center}
+body.book #header>h1:first-child{border:0!important;margin:2.5em 0 1em 0}
+body.book #header .details{border:0!important;display:block;padding:0!important}
+body.book #header .details span:first-child{margin-left:0!important}
+body.book #header .details br{display:block}
+body.book #header .details br+span:before{content:none!important}
+body.book #toc{border:0!important;text-align:left!important;padding:0!important;margin:0!important}
+body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-break-before:always}
+.listingblock code[data-lang]:before{display:block}
+#footer{background:none!important;padding:0 .9375em}
+#footer-text{color:rgba(0,0,0,.6)!important;font-size:.9em}
+.hide-on-print{display:none!important}
+.print-only{display:block!important}
+.hide-for-print{display:none!important}
+.show-for-print{display:inherit!important}}
+</style>
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.4.2/css/all.css">
+<style>
+.listingblock .pygments .hll { background-color: #ffffcc }
+.listingblock .pygments, .listingblock .pygments code { background: #f8f8f8; }
+.listingblock .pygments .tok-c { color: #408080; font-style: italic } /* Comment */
+.listingblock .pygments .tok-err { border: 1px solid #FF0000 } /* Error */
+.listingblock .pygments .tok-k { color: #008000; font-weight: bold } /* Keyword */
+.listingblock .pygments .tok-o { color: #666666 } /* Operator */
+.listingblock .pygments .tok-ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+.listingblock .pygments .tok-cm { color: #408080; font-style: italic } /* Comment.Multiline */
+.listingblock .pygments .tok-cp { color: #BC7A00 } /* Comment.Preproc */
+.listingblock .pygments .tok-cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+.listingblock .pygments .tok-c1 { color: #408080; font-style: italic } /* Comment.Single */
+.listingblock .pygments .tok-cs { color: #408080; font-style: italic } /* Comment.Special */
+.listingblock .pygments .tok-gd { color: #A00000 } /* Generic.Deleted */
+.listingblock .pygments .tok-ge { font-style: italic } /* Generic.Emph */
+.listingblock .pygments .tok-gr { color: #FF0000 } /* Generic.Error */
+.listingblock .pygments .tok-gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.listingblock .pygments .tok-gi { color: #00A000 } /* Generic.Inserted */
+.listingblock .pygments .tok-go { color: #888888 } /* Generic.Output */
+.listingblock .pygments .tok-gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.listingblock .pygments .tok-gs { font-weight: bold } /* Generic.Strong */
+.listingblock .pygments .tok-gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.listingblock .pygments .tok-gt { color: #0044DD } /* Generic.Traceback */
+.listingblock .pygments .tok-kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.listingblock .pygments .tok-kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.listingblock .pygments .tok-kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.listingblock .pygments .tok-kp { color: #008000 } /* Keyword.Pseudo */
+.listingblock .pygments .tok-kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.listingblock .pygments .tok-kt { color: #B00040 } /* Keyword.Type */
+.listingblock .pygments .tok-m { color: #666666 } /* Literal.Number */
+.listingblock .pygments .tok-s { color: #BA2121 } /* Literal.String */
+.listingblock .pygments .tok-na { color: #7D9029 } /* Name.Attribute */
+.listingblock .pygments .tok-nb { color: #008000 } /* Name.Builtin */
+.listingblock .pygments .tok-nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.listingblock .pygments .tok-no { color: #880000 } /* Name.Constant */
+.listingblock .pygments .tok-nd { color: #AA22FF } /* Name.Decorator */
+.listingblock .pygments .tok-ni { color: #999999; font-weight: bold } /* Name.Entity */
+.listingblock .pygments .tok-ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.listingblock .pygments .tok-nf { color: #0000FF } /* Name.Function */
+.listingblock .pygments .tok-nl { color: #A0A000 } /* Name.Label */
+.listingblock .pygments .tok-nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.listingblock .pygments .tok-nt { color: #008000; font-weight: bold } /* Name.Tag */
+.listingblock .pygments .tok-nv { color: #19177C } /* Name.Variable */
+.listingblock .pygments .tok-ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.listingblock .pygments .tok-w { color: #bbbbbb } /* Text.Whitespace */
+.listingblock .pygments .tok-mb { color: #666666 } /* Literal.Number.Bin */
+.listingblock .pygments .tok-mf { color: #666666 } /* Literal.Number.Float */
+.listingblock .pygments .tok-mh { color: #666666 } /* Literal.Number.Hex */
+.listingblock .pygments .tok-mi { color: #666666 } /* Literal.Number.Integer */
+.listingblock .pygments .tok-mo { color: #666666 } /* Literal.Number.Oct */
+.listingblock .pygments .tok-sa { color: #BA2121 } /* Literal.String.Affix */
+.listingblock .pygments .tok-sb { color: #BA2121 } /* Literal.String.Backtick */
+.listingblock .pygments .tok-sc { color: #BA2121 } /* Literal.String.Char */
+.listingblock .pygments .tok-dl { color: #BA2121 } /* Literal.String.Delimiter */
+.listingblock .pygments .tok-sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.listingblock .pygments .tok-s2 { color: #BA2121 } /* Literal.String.Double */
+.listingblock .pygments .tok-se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.listingblock .pygments .tok-sh { color: #BA2121 } /* Literal.String.Heredoc */
+.listingblock .pygments .tok-si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.listingblock .pygments .tok-sx { color: #008000 } /* Literal.String.Other */
+.listingblock .pygments .tok-sr { color: #BB6688 } /* Literal.String.Regex */
+.listingblock .pygments .tok-s1 { color: #BA2121 } /* Literal.String.Single */
+.listingblock .pygments .tok-ss { color: #19177C } /* Literal.String.Symbol */
+.listingblock .pygments .tok-bp { color: #008000 } /* Name.Builtin.Pseudo */
+.listingblock .pygments .tok-fm { color: #0000FF } /* Name.Function.Magic */
+.listingblock .pygments .tok-vc { color: #19177C } /* Name.Variable.Class */
+.listingblock .pygments .tok-vg { color: #19177C } /* Name.Variable.Global */
+.listingblock .pygments .tok-vi { color: #19177C } /* Name.Variable.Instance */
+.listingblock .pygments .tok-vm { color: #19177C } /* Name.Variable.Magic */
+.listingblock .pygments .tok-il { color: #666666 } /* Literal.Number.Integer.Long */
+</style>
+</head>
+<body class="article toc2 toc-left">
+<div id="header">
+<h1>IFI JEE - TP 2 - Handcraft</h1>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_présentation_et_objectifs">1. Présentation et objectifs</a></li>
+<li><a href="#_la_première_servlet_et_la_structure_projet">2. La première Servlet et la structure projet</a>
+<ul class="sectlevel2">
+<li><a href="#_initialisation_du_projet">2.1. Initialisation du projet</a>
+<ul class="sectlevel3">
+<li><a href="#_création_de_l_arborescence_projet">2.1.1. Création de l&#8217;arborescence projet</a></li>
+</ul>
+</li>
+<li><a href="#_ecriture_de_la_première_servlet">2.2. Ecriture de la première servlet</a></li>
+<li><a href="#_installation_de_tomcat">2.3. Installation de Tomcat</a>
+<ul class="sectlevel3">
+<li><a href="#_configuration_pour_intellij_idea">2.3.1. Configuration pour IntelliJ IDEA</a></li>
+</ul>
+</li>
+<li><a href="#_démarrer_notre_première_servlet">2.4. Démarrer notre première Servlet</a></li>
+</ul>
+</li>
+<li><a href="#_passer_votre_servlet_en_mode_annotations_code_servlet_api_code_3_0">3. Passer votre servlet en mode "annotations" <code>servlet-api</code> 3.0</a>
+<ul class="sectlevel2">
+<li><a href="#_le_code">3.1. Le code</a></li>
+<li><a href="#_le_packaging">3.2. Le packaging</a></li>
+</ul>
+</li>
+<li><a href="#_la_servlet_dynamique">4. La servlet dynamique</a>
+<ul class="sectlevel2">
+<li><a href="#_les_annotations">4.1. Les annotations</a></li>
+<li><a href="#_notre_premier_controller">4.2. Notre premier controller</a></li>
+<li><a href="#_l_analyse_dynamique_du_code">4.3. L&#8217;analyse dynamique du code</a>
+<ul class="sectlevel3">
+<li><a href="#_junit_et_maven">4.3.1. JUnit et Maven</a></li>
+<li><a href="#_le_test_unitaire">4.3.2. Le test unitaire</a></li>
+<li><a href="#_la_dispatcherservlet_code_à_trous">4.3.3. La DispatcherServlet (code à trous)</a></li>
+</ul>
+</li>
+<li><a href="#_le_routage_des_requêtes_code_à_trous">4.4. Le routage des requêtes (code à trous)</a>
+<ul class="sectlevel3">
+<li><a href="#_les_tests_unitaires_du_routage">4.4.1. Les tests unitaires du routage</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_le_micro_service_pokemon">5. Le micro-service Pokemon</a>
+<ul class="sectlevel2">
+<li><a href="#_la_classe_pokemon">5.1. La classe Pokemon</a></li>
+<li><a href="#_le_pokemonrepository">5.2. Le PokemonRepository</a>
+<ul class="sectlevel3">
+<li><a href="#_jackson_databind">5.2.1. jackson-databind</a></li>
+<li><a href="#_httpclient">5.2.2. HttpClient</a></li>
+<li><a href="#_les_tests_unitaires_du_repository">5.2.3. Les tests unitaires du repository</a></li>
+<li><a href="#_le_pokemonrepository_2">5.2.4. Le PokemonRepository</a></li>
+<li><a href="#_le_pokemoncontroller">5.2.5. Le PokemonController</a>
+<ul class="sectlevel4">
+<li><a href="#_les_tests_unitaires_du_pokemoncontroller">Les tests unitaires du PokemonController</a></li>
+<li><a href="#_le_pokemoncontroller_code_à_trous">Le PokemonController (code à trous)</a></li>
+<li><a href="#_modifications_de_la_dispatcherservlet">Modifications de la DispatcherServlet</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_présentation_et_objectifs"><a class="anchor" href="#_présentation_et_objectifs"></a><a class="link" href="#_présentation_et_objectifs">1. Présentation et objectifs</a></h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="images/architecture.svg" alt="inline">
+</div>
+</div>
+<div class="paragraph">
+<p>Le but est de créer une architecture "à la microservice".</p>
+</div>
+<div class="paragraph">
+<p>Dans cette architecture, chaque composant a son rôle précis :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>la servlet reçoit les requêtes HTTP, et les envoie au bon controller (rôle de point d&#8217;entrée de l&#8217;application)</p>
+</li>
+<li>
+<p>le controlleur implémente une méthode Java par route HTTP, récupère les paramètres, et appelle le service (rôle de routage)</p>
+</li>
+<li>
+<p>le service implémente le métier de notre micro-service</p>
+</li>
+<li>
+<p>le repository représente les accès aux données (avec potentiellement une base de données)</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>On retrouve en général le même découpage dans les micro-services NodeJS avec express:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>La déclaration de l&#8217;application (express)</p>
+</li>
+<li>
+<p>La déclaration des routeurs (express.Router)</p>
+</li>
+<li>
+<p>L&#8217;implémentation du code métier</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Nous allons donc développer un micro-service, qui exposera un canal de communication REST/JSON.</p>
+</div>
+<div class="paragraph">
+<p>Pour ce faire, nous allons:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Créer des annotations Java pour représenter nos objects</p>
+</li>
+<li>
+<p>Créer une servlet, qui se configurera dynamiquement pour router les requêtes au bon controlleur</p>
+</li>
+<li>
+<p>Implémenter un petit service</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_la_première_servlet_et_la_structure_projet"><a class="anchor" href="#_la_première_servlet_et_la_structure_projet"></a><a class="link" href="#_la_première_servlet_et_la_structure_projet">2. La première Servlet et la structure projet</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Pour commencer, créons une première servlet.</p>
+</div>
+<div class="sect2">
+<h3 id="_initialisation_du_projet"><a class="anchor" href="#_initialisation_du_projet"></a><a class="link" href="#_initialisation_du_projet">2.1. Initialisation du projet</a></h3>
+<div class="sect3">
+<h4 id="_création_de_l_arborescence_projet"><a class="anchor" href="#_création_de_l_arborescence_projet"></a><a class="link" href="#_création_de_l_arborescence_projet">2.1.1. Création de l&#8217;arborescence projet</a></h4>
+<div class="paragraph">
+<p>Créer un répertoire projet:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="bash">$ mkdir handcraft</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Créer les répertoires de sources java et de test</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="bash">$ <span class="tok-nb">cd</span> monProjet
+$ mkdir -p src/main/java</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Initialiser un fichier pom.xml à la racine du projet</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="xml"><span class="tok-nt">&lt;project&gt;</span>
+    <span class="tok-nt">&lt;modelVersion&gt;</span>4.0.0<span class="tok-nt">&lt;/modelVersion&gt;</span>
+    <span class="tok-nt">&lt;groupId&gt;</span>com.ifi.tp<span class="tok-nt">&lt;/groupId&gt;</span>
+    <span class="tok-nt">&lt;artifactId&gt;</span>handcraft<span class="tok-nt">&lt;/artifactId&gt;</span>
+    <span class="tok-nt">&lt;version&gt;</span>0.1.0<span class="tok-nt">&lt;/version&gt;</span>
+    <span class="tok-nt">&lt;packaging&gt;</span>war<span class="tok-nt">&lt;/packaging&gt;</span> <i class="conum" data-value="1"></i><b>(1)</b>
+
+    <span class="tok-nt">&lt;properties&gt;</span>
+        <span class="tok-nt">&lt;maven.compiler.source&gt;</span>11<span class="tok-nt">&lt;/maven.compiler.source&gt;</span> <i class="conum" data-value="2"></i><b>(2)</b>
+        <span class="tok-nt">&lt;maven.compiler.target&gt;</span>11<span class="tok-nt">&lt;/maven.compiler.target&gt;</span> <i class="conum" data-value="3"></i><b>(3)</b>
+    <span class="tok-nt">&lt;/properties&gt;</span>
+
+    <span class="tok-nt">&lt;dependencies&gt;</span>
+    <span class="tok-nt">&lt;/dependencies&gt;</span>
+
+<span class="tok-nt">&lt;/project&gt;</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>On va fabriquer un war</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>On indique à maven quelle version de Java utiliser pour les sources !</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>On indique à maven quelle version de JVM on cible !</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ecriture_de_la_première_servlet"><a class="anchor" href="#_ecriture_de_la_première_servlet"></a><a class="link" href="#_ecriture_de_la_première_servlet">2.2. Ecriture de la première servlet</a></h3>
+<div class="paragraph">
+<p>Pour écrire notre première servlet, nous avons besoin de la dépendance <code>javax.servlet-api</code>.
+Cette dépendance aura le scope <code>provided</code> puisque:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>nous en avons besoin à la compilation</p>
+</li>
+<li>
+<p>à l&#8217;exécution, c&#8217;est <code>Tomcat</code> qui portera la librairie</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Ajouter la dépendance suivante dans votre <code>pom.xml</code></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="xml"><span class="tok-nt">&lt;dependency&gt;</span>
+    <span class="tok-nt">&lt;groupId&gt;</span>javax.servlet<span class="tok-nt">&lt;/groupId&gt;</span>
+    <span class="tok-nt">&lt;artifactId&gt;</span>javax.servlet-api<span class="tok-nt">&lt;/artifactId&gt;</span>
+    <span class="tok-nt">&lt;version&gt;</span>3.1.0<span class="tok-nt">&lt;/version&gt;</span>
+    <span class="tok-nt">&lt;scope&gt;</span>provided<span class="tok-nt">&lt;/scope&gt;</span> <i class="conum" data-value="1"></i><b>(1)</b>
+<span class="tok-nt">&lt;/dependency&gt;</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>On précise bien un scope <em>provided</em> à Maven</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Ecrire une première servlet :</p>
+</div>
+<div class="listingblock">
+<div class="title">src/main/java/FirstServlet.java</div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="java"><span class="tok-kd">public</span> <span class="tok-kd">class</span> <span class="tok-nc">FirstServlet</span> <span class="tok-kd">extends</span> <span class="tok-n">HttpServlet</span> <span class="tok-o">{</span>
+
+    <span class="tok-nd">@Override</span>
+    <span class="tok-kd">protected</span> <span class="tok-kt">void</span> <span class="tok-nf">doGet</span><span class="tok-o">(</span><span class="tok-n">HttpServletRequest</span> <span class="tok-n">req</span><span class="tok-o">,</span> <span class="tok-n">HttpServletResponse</span> <span class="tok-n">resp</span><span class="tok-o">)</span> <span class="tok-kd">throws</span> <span class="tok-n">ServletException</span><span class="tok-o">,</span> <span class="tok-n">IOException</span> <span class="tok-o">{</span>
+        <span class="tok-n">var</span> <span class="tok-n">writer</span> <span class="tok-o">=</span> <span class="tok-n">resp</span><span class="tok-o">.</span><span class="tok-na">getWriter</span><span class="tok-o">();</span>
+        <span class="tok-n">writer</span><span class="tok-o">.</span><span class="tok-na">println</span><span class="tok-o">(</span><span class="tok-s">&quot;Hello !&quot;</span><span class="tok-o">);</span> <i class="conum" data-value="1"></i><b>(1)</b>
+    <span class="tok-o">}</span>
+
+    <span class="tok-nd">@Override</span>
+    <span class="tok-kd">public</span> <span class="tok-kt">void</span> <span class="tok-nf">init</span><span class="tok-o">(</span><span class="tok-n">ServletConfig</span> <span class="tok-n">config</span><span class="tok-o">)</span> <span class="tok-kd">throws</span> <span class="tok-n">ServletException</span> <span class="tok-o">{</span>
+        <span class="tok-kd">super</span><span class="tok-o">.</span><span class="tok-na">init</span><span class="tok-o">(</span><span class="tok-n">config</span><span class="tok-o">);</span>
+
+        <span class="tok-n">System</span><span class="tok-o">.</span><span class="tok-na">out</span><span class="tok-o">.</span><span class="tok-na">println</span><span class="tok-o">(</span><span class="tok-s">&quot;Initialisation de la servlet&quot;</span><span class="tok-o">);</span> <i class="conum" data-value="2"></i><b>(2)</b>
+    <span class="tok-o">}</span>
+<span class="tok-o">}</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>On dit bonjour !</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>On affiche un log au démarrage</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Ecrire un fichier web.xml pour déclarer la servlet:</p>
+</div>
+<div class="listingblock">
+<div class="title">src/main/webapp/WEB-INF/web.xml</div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="xml"><span class="tok-cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+
+<span class="tok-nt">&lt;web-app</span> <span class="tok-na">xmlns=</span><span class="tok-s">&quot;http://xmlns.jcp.org/xml/ns/javaee&quot;</span>
+         <span class="tok-na">xmlns:xsi=</span><span class="tok-s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+         <span class="tok-na">xsi:schemaLocation=</span><span class="tok-s">&quot;http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd&quot;</span>
+         <span class="tok-na">version=</span><span class="tok-s">&quot;3.1&quot;</span><span class="tok-nt">&gt;</span>
+
+    <span class="tok-nt">&lt;display-name&gt;</span>handcraft<span class="tok-nt">&lt;/display-name&gt;</span> <i class="conum" data-value="1"></i><b>(1)</b>
+
+    <span class="tok-nt">&lt;servlet&gt;</span>
+        <span class="tok-nt">&lt;servlet-name&gt;</span>dispatcherServlet<span class="tok-nt">&lt;/servlet-name&gt;</span> <i class="conum" data-value="2"></i><b>(2)</b>
+        <span class="tok-nt">&lt;servlet-class&gt;</span>io.codeka.handcraft.servlet.DispatcherServlet<span class="tok-nt">&lt;/servlet-class&gt;</span>
+        <span class="tok-nt">&lt;load-on-startup&gt;</span>1<span class="tok-nt">&lt;/load-on-startup&gt;</span> <i class="conum" data-value="4"></i><b>(4)</b>
+    <span class="tok-nt">&lt;/servlet&gt;</span>
+
+    <span class="tok-nt">&lt;servlet-mapping&gt;</span>
+        <span class="tok-nt">&lt;servlet-name&gt;</span>dispatcherServlet<span class="tok-nt">&lt;/servlet-name&gt;</span>
+        <span class="tok-nt">&lt;url-pattern&gt;</span>/*<span class="tok-nt">&lt;/url-pattern&gt;</span> <i class="conum" data-value="3"></i><b>(3)</b>
+    <span class="tok-nt">&lt;/servlet-mapping&gt;</span>
+
+<span class="tok-nt">&lt;/web-app&gt;</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Notre application</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Notre servlet</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>On écoute l&#8217;ensemble des URLs !</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td><em>load-on-startup</em> permet de préciser qu&#8217;on souhaite démarrer la servlet immédiatement
+(sans attendre la première requête)</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_installation_de_tomcat"><a class="anchor" href="#_installation_de_tomcat"></a><a class="link" href="#_installation_de_tomcat">2.3. Installation de Tomcat</a></h3>
+<div class="paragraph">
+<p>Nous avons besoin de Tomcat pour exécuter notre Servlet !</p>
+</div>
+<div class="paragraph">
+<p>Télécharger tomcat depuis la page officielle : <a href="https://tomcat.apache.org/download-90.cgi" class="bare">https://tomcat.apache.org/download-90.cgi</a></p>
+</div>
+<div class="paragraph">
+<p>Récupérer le zip ou le tar.gz.</p>
+</div>
+<div class="sect3">
+<h4 id="_configuration_pour_intellij_idea"><a class="anchor" href="#_configuration_pour_intellij_idea"></a><a class="link" href="#_configuration_pour_intellij_idea">2.3.1. Configuration pour IntelliJ IDEA</a></h4>
+<div class="paragraph">
+<p>Ajouter le serveur Tomcat à IntelliJ</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/01-add-tomcat-intellij.png" alt="01 add tomcat intellij">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/02-tomcat-intellij-added.png" alt="02 tomcat intellij added">
+</div>
+</div>
+<div class="paragraph">
+<p>Créer une configuration d&#8217;exécution utilisant le Tomcat</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/03-tomcat-run-config-server.png" alt="03 tomcat run config server">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/04-tomcat-run-config-artifacts.png" alt="04 tomcat run config artifacts">
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_démarrer_notre_première_servlet"><a class="anchor" href="#_démarrer_notre_première_servlet"></a><a class="link" href="#_démarrer_notre_première_servlet">2.4. Démarrer notre première Servlet</a></h3>
+<div class="paragraph">
+<p>Démarrez votre serveur Tomcat, avec votre servlet, et allez constater le résultat !</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Votre application est disponible à l&#8217;URL <a href="http://localhost:8080" class="bare">http://localhost:8080</a>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_passer_votre_servlet_en_mode_annotations_code_servlet_api_code_3_0"><a class="anchor" href="#_passer_votre_servlet_en_mode_annotations_code_servlet_api_code_3_0"></a><a class="link" href="#_passer_votre_servlet_en_mode_annotations_code_servlet_api_code_3_0">3. Passer votre servlet en mode "annotations" <code>servlet-api</code> 3.0</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_le_code"><a class="anchor" href="#_le_code"></a><a class="link" href="#_le_code">3.1. Le code</a></h3>
+<div class="paragraph">
+<p>Depuis la version 3.0 de <code>servlet-api</code>, les servlets supportent les annotations Java.</p>
+</div>
+<div class="paragraph">
+<p>Plus besoin de <code>web.xml</code>!</p>
+</div>
+<div class="paragraph">
+<p>Supprimer le fichier <code>web.xml</code>, et le répertoire <code>src/main/webapp</code>.</p>
+</div>
+<div class="paragraph">
+<p>Modifier la servlet pour ajouter une annotation java :</p>
+</div>
+<div class="listingblock">
+<div class="title">src/main/java/FirstServlet.java</div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="java"><span class="tok-nd">@WebServlet</span><span class="tok-o">(</span><span class="tok-n">urlPatterns</span> <span class="tok-o">=</span> <span class="tok-s">&quot;/*&quot;</span><span class="tok-o">,</span>  <i class="conum" data-value="1"></i><b>(1)</b> <i class="conum" data-value="2"></i><b>(2)</b>
+  <span class="tok-n">loadOnStartup</span> <span class="tok-o">=</span> <span class="tok-mi">1</span><span class="tok-o">)</span> <i class="conum" data-value="3"></i><b>(3)</b>
+<span class="tok-kd">public</span> <span class="tok-kd">class</span> <span class="tok-nc">FirstServlet</span> <span class="tok-kd">extends</span> <span class="tok-n">HttpServlet</span> <span class="tok-o">{</span>
+
+    <span class="tok-nd">@Override</span>
+    <span class="tok-kd">protected</span> <span class="tok-kt">void</span> <span class="tok-nf">doGet</span><span class="tok-o">(</span><span class="tok-n">HttpServletRequest</span> <span class="tok-n">req</span><span class="tok-o">,</span> <span class="tok-n">HttpServletResponse</span> <span class="tok-n">resp</span><span class="tok-o">)</span> <span class="tok-kd">throws</span> <span class="tok-n">ServletException</span><span class="tok-o">,</span> <span class="tok-n">IOException</span> <span class="tok-o">{</span>
+        <span class="tok-n">PrintWriter</span> <span class="tok-n">writer</span> <span class="tok-o">=</span> <span class="tok-n">resp</span><span class="tok-o">.</span><span class="tok-na">getWriter</span><span class="tok-o">();</span>
+        <span class="tok-n">writer</span><span class="tok-o">.</span><span class="tok-na">println</span><span class="tok-o">(</span><span class="tok-s">&quot;Hello !&quot;</span><span class="tok-o">);</span>
+    <span class="tok-o">}</span>
+
+    <span class="tok-nd">@Override</span>
+    <span class="tok-kd">public</span> <span class="tok-kt">void</span> <span class="tok-nf">init</span><span class="tok-o">(</span><span class="tok-n">ServletConfig</span> <span class="tok-n">config</span><span class="tok-o">)</span> <span class="tok-kd">throws</span> <span class="tok-n">ServletException</span> <span class="tok-o">{</span>
+        <span class="tok-kd">super</span><span class="tok-o">.</span><span class="tok-na">init</span><span class="tok-o">(</span><span class="tok-n">config</span><span class="tok-o">);</span>
+
+        <span class="tok-n">System</span><span class="tok-o">.</span><span class="tok-na">out</span><span class="tok-o">.</span><span class="tok-na">println</span><span class="tok-o">(</span><span class="tok-s">&quot;Initialisation de la servlet&quot;</span><span class="tok-o">);</span> <i class="conum" data-value="2"></i><b>(2)</b>
+    <span class="tok-o">}</span>
+<span class="tok-o">}</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>On déclare la servlet avec une annotation java !</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>On déclare les URL d&#8217;écoute</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>et on déclare souhaiter démarrer la servlet sans attendre de première requête</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_le_packaging"><a class="anchor" href="#_le_packaging"></a><a class="link" href="#_le_packaging">3.2. Le packaging</a></h3>
+<div class="paragraph">
+<p>Par défaut, Maven ne connaît pas les servlets 3.0. Il s&#8217;attend donc à trouver un fichier <code>web.xml</code> dans le répertoire
+<code>src/main/webapp/WEB-INF</code>.</p>
+</div>
+<div class="paragraph">
+<p>Si on lance un <code>mvn package</code> après avoir supprimé le <code>web.xml</code> et le répertoire <code>webapp</code>, on obtient l&#8217;erreur suivante :</p>
+</div>
+<div class="listingblock">
+<div class="title">mvn package</div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="bash">$&gt; mvn clean package
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> Scanning <span class="tok-k">for</span> projects...
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span>
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> ------------------------&lt; io.codeka:handcraft &gt;-------------------------
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> Building handcraft <span class="tok-m">1</span>.0.0
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> --------------------------------<span class="tok-o">[</span> war <span class="tok-o">]</span>---------------------------------
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span>
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> --- maven-clean-plugin:2.5:clean <span class="tok-o">(</span>default-clean<span class="tok-o">)</span> @ handcraft ---
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> Deleting /home/jwittouck/workspaces/ifi/tp-ifi-2018-handcrafting/target
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span>
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> --- maven-resources-plugin:2.6:resources <span class="tok-o">(</span>default-resources<span class="tok-o">)</span> @ handcraft ---
+<span class="tok-o">[</span>WARNING<span class="tok-o">]</span> Using platform encoding <span class="tok-o">(</span>UTF-8 actually<span class="tok-o">)</span> to copy filtered resources, i.e. build is platform dependent!
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> skip non existing resourceDirectory /home/jwittouck/workspaces/ifi/tp-ifi-2018-handcrafting/src/main/resources
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span>
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> --- maven-compiler-plugin:3.1:compile <span class="tok-o">(</span>default-compile<span class="tok-o">)</span> @ handcraft ---
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> Changes detected - recompiling the module!
+<span class="tok-o">[</span>WARNING<span class="tok-o">]</span> File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> Compiling <span class="tok-m">1</span> <span class="tok-nb">source</span> file to /home/jwittouck/workspaces/ifi/tp-ifi-2018-handcrafting/target/classes
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span>
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> --- maven-resources-plugin:2.6:testResources <span class="tok-o">(</span>default-testResources<span class="tok-o">)</span> @ handcraft ---
+<span class="tok-o">[</span>WARNING<span class="tok-o">]</span> Using platform encoding <span class="tok-o">(</span>UTF-8 actually<span class="tok-o">)</span> to copy filtered resources, i.e. build is platform dependent!
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> skip non existing resourceDirectory /home/jwittouck/workspaces/ifi/tp-ifi-2018-handcrafting/src/test/resources
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span>
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> --- maven-compiler-plugin:3.1:testCompile <span class="tok-o">(</span>default-testCompile<span class="tok-o">)</span> @ handcraft ---
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> No sources to compile
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span>
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> --- maven-surefire-plugin:2.12.4:test <span class="tok-o">(</span>default-test<span class="tok-o">)</span> @ handcraft ---
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> No tests to run.
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span>
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> --- maven-war-plugin:2.2:war <span class="tok-o">(</span>default-war<span class="tok-o">)</span> @ handcraft ---
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.thoughtworks.xstream.core.util.Fields <span class="tok-o">(</span>file:/home/jwittouck/.m2/repository/com/thoughtworks/xstream/xstream/1.3.1/xstream-1.3.1.jar<span class="tok-o">)</span> to field java.util.Properties.defaults
+WARNING: Please consider reporting this to the maintainers of com.thoughtworks.xstream.core.util.Fields
+WARNING: Use --illegal-access<span class="tok-o">=</span>warn to <span class="tok-nb">enable</span> warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> Packaging webapp
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> Assembling webapp <span class="tok-o">[</span>handcraft<span class="tok-o">]</span> in <span class="tok-o">[</span>/home/jwittouck/workspaces/ifi/tp-ifi-2018-handcrafting/target/handcraft-1.0.0<span class="tok-o">]</span>
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> Processing war project
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> Copying webapp resources <span class="tok-o">[</span>/home/jwittouck/workspaces/ifi/tp-ifi-2018-handcrafting/src/main/webapp<span class="tok-o">]</span>
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> Webapp assembled in <span class="tok-o">[</span><span class="tok-m">25</span> msecs<span class="tok-o">]</span>
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> Building war: /home/jwittouck/workspaces/ifi/tp-ifi-2018-handcrafting/target/handcraft-1.0.0.war
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> ------------------------------------------------------------------------
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> BUILD FAILURE
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> ------------------------------------------------------------------------
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> Total time: <span class="tok-m">1</span>.757 s
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> Finished at: <span class="tok-m">2018</span>-10-26T16:51:00+02:00
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> ------------------------------------------------------------------------
+<span class="tok-o">[</span>ERROR<span class="tok-o">]</span> Failed to execute goal org.apache.maven.plugins:maven-war-plugin:2.2:war <span class="tok-o">(</span>default-war<span class="tok-o">)</span> on project handcraft: Error assembling WAR: webxml attribute is required <span class="tok-o">(</span>or pre-existing WEB-INF/web.xml <span class="tok-k">if</span> executing in update mode<span class="tok-o">)</span> -&gt; <span class="tok-o">[</span>Help <span class="tok-m">1</span><span class="tok-o">]</span> <i class="conum" data-value="1"></i><b>(1)</b>
+<span class="tok-o">[</span>ERROR<span class="tok-o">]</span>
+<span class="tok-o">[</span>ERROR<span class="tok-o">]</span> To see the full stack trace of the errors, re-run Maven with the -e switch.
+<span class="tok-o">[</span>ERROR<span class="tok-o">]</span> Re-run Maven using the -X switch to <span class="tok-nb">enable</span> full debug logging.
+<span class="tok-o">[</span>ERROR<span class="tok-o">]</span>
+<span class="tok-o">[</span>ERROR<span class="tok-o">]</span> For more information about the errors and possible solutions, please <span class="tok-nb">read</span> the following articles:
+<span class="tok-o">[</span>ERROR<span class="tok-o">]</span> <span class="tok-o">[</span>Help <span class="tok-m">1</span><span class="tok-o">]</span> http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Maven n&#8217;est pas content, et veut un fichier <code>web.xml</code> !</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Pour corriger ce comportement, il faut utiliser une version récente du plugin maven <code>war</code>.
+Pour ce faire, ajouter dans votre <code>pom.xml</code> le bloc suivant (en dessous de votre bloc <code>dependencies</code>)</p>
+</div>
+<div class="listingblock">
+<div class="title">pom.xml</div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="xml"><span class="tok-nt">&lt;build&gt;</span>
+    <span class="tok-nt">&lt;pluginManagement&gt;</span>
+        <span class="tok-nt">&lt;plugins&gt;</span>
+            <span class="tok-nt">&lt;plugin&gt;</span>
+                <span class="tok-nt">&lt;artifactId&gt;</span>maven-war-plugin<span class="tok-nt">&lt;/artifactId&gt;</span>
+                <span class="tok-nt">&lt;version&gt;</span>3.2.2<span class="tok-nt">&lt;/version&gt;</span> <i class="conum" data-value="1"></i><b>(1)</b>
+            <span class="tok-nt">&lt;/plugin&gt;</span>
+        <span class="tok-nt">&lt;/plugins&gt;</span>
+    <span class="tok-nt">&lt;/pluginManagement&gt;</span>
+<span class="tok-nt">&lt;/build&gt;</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>La version 3.2.2 du maven-war-plugin ne nécessite pas de fichier web.xml par défaut, comme précisé dans la <a href="https://maven.apache.org/plugins/maven-war-plugin/war-mojo.html#failOnMissingWebXml">documentation</a></td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>On relance un <code>mvn package</code> pour valider la configuration</p>
+</div>
+<div class="listingblock">
+<div class="title">mvn package</div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="bash">$&gt; mvn clean package
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> Scanning <span class="tok-k">for</span> projects...
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span>
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> ------------------------&lt; io.codeka:handcraft &gt;-------------------------
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> Building handcraft <span class="tok-m">1</span>.0.0
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> --------------------------------<span class="tok-o">[</span> war <span class="tok-o">]</span>---------------------------------
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span>
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> --- maven-clean-plugin:2.5:clean <span class="tok-o">(</span>default-clean<span class="tok-o">)</span> @ handcraft ---
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> Deleting /home/jwittouck/workspaces/ifi/tp-ifi-2018-handcrafting/target
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span>
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> --- maven-resources-plugin:2.6:resources <span class="tok-o">(</span>default-resources<span class="tok-o">)</span> @ handcraft ---
+<span class="tok-o">[</span>WARNING<span class="tok-o">]</span> Using platform encoding <span class="tok-o">(</span>UTF-8 actually<span class="tok-o">)</span> to copy filtered resources, i.e. build is platform dependent!
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> skip non existing resourceDirectory /home/jwittouck/workspaces/ifi/tp-ifi-2018-handcrafting/src/main/resources
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span>
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> --- maven-compiler-plugin:3.1:compile <span class="tok-o">(</span>default-compile<span class="tok-o">)</span> @ handcraft ---
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> Changes detected - recompiling the module!
+<span class="tok-o">[</span>WARNING<span class="tok-o">]</span> File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> Compiling <span class="tok-m">1</span> <span class="tok-nb">source</span> file to /home/jwittouck/workspaces/ifi/tp-ifi-2018-handcrafting/target/classes
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span>
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> --- maven-resources-plugin:2.6:testResources <span class="tok-o">(</span>default-testResources<span class="tok-o">)</span> @ handcraft ---
+<span class="tok-o">[</span>WARNING<span class="tok-o">]</span> Using platform encoding <span class="tok-o">(</span>UTF-8 actually<span class="tok-o">)</span> to copy filtered resources, i.e. build is platform dependent!
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> skip non existing resourceDirectory /home/jwittouck/workspaces/ifi/tp-ifi-2018-handcrafting/src/test/resources
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span>
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> --- maven-compiler-plugin:3.1:testCompile <span class="tok-o">(</span>default-testCompile<span class="tok-o">)</span> @ handcraft ---
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> No sources to compile
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span>
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> --- maven-surefire-plugin:2.12.4:test <span class="tok-o">(</span>default-test<span class="tok-o">)</span> @ handcraft ---
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> No tests to run.
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span>
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> --- maven-war-plugin:3.2.2:war <span class="tok-o">(</span>default-war<span class="tok-o">)</span> @ handcraft ---
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> Packaging webapp
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> Assembling webapp <span class="tok-o">[</span>handcraft<span class="tok-o">]</span> in <span class="tok-o">[</span>/home/jwittouck/workspaces/ifi/tp-ifi-2018-handcrafting/target/handcraft-1.0.0<span class="tok-o">]</span>
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> Processing war project
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> Copying webapp resources <span class="tok-o">[</span>/home/jwittouck/workspaces/ifi/tp-ifi-2018-handcrafting/src/main/webapp<span class="tok-o">]</span>
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> Webapp assembled in <span class="tok-o">[</span><span class="tok-m">32</span> msecs<span class="tok-o">]</span>
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> Building war: /home/jwittouck/workspaces/ifi/tp-ifi-2018-handcrafting/target/handcraft-1.0.0.war
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> ------------------------------------------------------------------------
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> BUILD SUCCESS <i class="conum" data-value="1"></i><b>(1)</b>
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> ------------------------------------------------------------------------
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> Total time: <span class="tok-m">1</span>.832 s
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> Finished at: <span class="tok-m">2018</span>-10-26T16:59:26+02:00
+<span class="tok-o">[</span>INFO<span class="tok-o">]</span> ------------------------------------------------------------------------</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Maven est content !</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Validez que votre servlet fonctionne toujours en la démarrant et en allant voir <a href="http://localhost:8080" class="bare">http://localhost:8080</a>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_la_servlet_dynamique"><a class="anchor" href="#_la_servlet_dynamique"></a><a class="link" href="#_la_servlet_dynamique">4. La servlet dynamique</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_les_annotations"><a class="anchor" href="#_les_annotations"></a><a class="link" href="#_les_annotations">4.1. Les annotations</a></h3>
+<div class="paragraph">
+<p>Nous allons utiliser des annotations Java customisées pour créer notre couche de routage.
+Ces annotations seront analysées par la servlet, avec l&#8217;aide des api <code>java.lang.reflect</code>, afin de configurer
+le routage des requêtes HTTP vers le bon controller.</p>
+</div>
+<div class="paragraph">
+<p>Pour la couche Controller, nous allons créer 2 annotations :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>@Controller</code> : afin de marquer une classe comme étant un controller dans notre architecture</p>
+</li>
+<li>
+<p><code>@RequestMapping</code> : afin de marquer une méthode de controller comme devant recevoir des requêtes HTTP</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Créer les annotations suivantes dans votre projet :</p>
+</div>
+<div class="listingblock">
+<div class="title">L&#8217;annotation @Controller</div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="java"><span class="tok-nd">@Retention</span><span class="tok-o">(</span><span class="tok-n">RetentionPolicy</span><span class="tok-o">.</span><span class="tok-na">RUNTIME</span><span class="tok-o">)</span> <i class="conum" data-value="1"></i><b>(1)</b>
+<span class="tok-kd">public</span> <span class="tok-nd">@interface</span> <span class="tok-n">Controller</span> <span class="tok-o">{</span>
+<span class="tok-o">}</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>On met une rétention au <em>runtime</em>, puisque nous allons utiliser l&#8217;annotation à l&#8217;exécution</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="title">L&#8217;annotation RequestMapping</div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="java"><span class="tok-nd">@Retention</span><span class="tok-o">(</span><span class="tok-n">RetentionPolicy</span><span class="tok-o">.</span><span class="tok-na">RUNTIME</span><span class="tok-o">)</span> <i class="conum" data-value="1"></i><b>(1)</b>
+<span class="tok-kd">public</span> <span class="tok-nd">@interface</span> <span class="tok-n">RequestMapping</span> <span class="tok-o">{</span>
+    <span class="tok-c1">// uri à écouter</span>
+    <span class="tok-n">String</span> <span class="tok-nf">uri</span><span class="tok-o">();</span> <i class="conum" data-value="2"></i><b>(2)</b>
+<span class="tok-o">}</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>On a encore une rétention au <em>runtime</em></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Notre annotation utilise un paramètre <code>uri</code>, permettant de déclarer quelle URI sera écoutée
+(comme ce qu&#8217;on peut faire avec une servlet)</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_notre_premier_controller"><a class="anchor" href="#_notre_premier_controller"></a><a class="link" href="#_notre_premier_controller">4.2. Notre premier controller</a></h3>
+<div class="listingblock">
+<div class="title">Un controller simple qui dit bonjour</div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="java"><span class="tok-nd">@Controller</span> <i class="conum" data-value="1"></i><b>(1)</b>
+<span class="tok-kd">public</span> <span class="tok-kd">class</span> <span class="tok-nc">HelloController</span> <span class="tok-o">{</span>
+
+    <span class="tok-nd">@RequestMapping</span><span class="tok-o">(</span><span class="tok-n">uri</span><span class="tok-o">=</span><span class="tok-s">&quot;/hello&quot;</span><span class="tok-o">)</span> <i class="conum" data-value="2"></i><b>(2)</b>
+    <span class="tok-kd">public</span> <span class="tok-n">String</span> <span class="tok-nf">sayHello</span><span class="tok-o">(){</span>
+        <span class="tok-k">return</span> <span class="tok-s">&quot;Hello World !&quot;</span><span class="tok-o">;</span>
+    <span class="tok-o">}</span>
+
+    <span class="tok-nd">@RequestMapping</span><span class="tok-o">(</span><span class="tok-n">uri</span><span class="tok-o">=</span><span class="tok-s">&quot;/bye&quot;</span><span class="tok-o">)</span>
+    <span class="tok-kd">public</span> <span class="tok-n">String</span> <span class="tok-nf">sayGoodBye</span><span class="tok-o">(){</span>
+        <span class="tok-k">return</span> <span class="tok-s">&quot;Goodbye !&quot;</span><span class="tok-o">;</span>
+    <span class="tok-o">}</span>
+
+    <span class="tok-nd">@RequestMapping</span><span class="tok-o">(</span><span class="tok-n">uri</span><span class="tok-o">=</span><span class="tok-s">&quot;/boum&quot;</span><span class="tok-o">)</span>
+    <span class="tok-kd">public</span> <span class="tok-n">String</span> <span class="tok-nf">explode</span><span class="tok-o">(){</span>
+        <span class="tok-k">throw</span> <span class="tok-k">new</span> <span class="tok-n">RuntimeException</span><span class="tok-o">(</span><span class="tok-s">&quot;Explosion !&quot;</span><span class="tok-o">);</span> <i class="conum" data-value="3"></i><b>(3)</b>
+    <span class="tok-o">}</span>
+
+<span class="tok-o">}</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Nous utilisons ici notre annotation</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>La méthode <code>sayHello</code> écoute à l&#8217;URI <code>/hello</code> et renvoie une chaîne de caractères</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>La méthode <code>explode</code> lève une exception !</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_l_analyse_dynamique_du_code"><a class="anchor" href="#_l_analyse_dynamique_du_code"></a><a class="link" href="#_l_analyse_dynamique_du_code">4.3. L&#8217;analyse dynamique du code</a></h3>
+<div class="paragraph">
+<p>Notre servlet, que l&#8217;on nommera <code>DispatcherServlet</code> va analyser le code de notre controller,
+pour être capable de router les requêtes HTTP, et récupérer les résultats</p>
+</div>
+<div class="paragraph">
+<p>Supprimez votre servlet précédente, elle ne nous sera plus utile pour la suite.</p>
+</div>
+<div class="paragraph">
+<p>Pour réaliser notre servlet, nous allons travailler en TDD (test-driven-development).</p>
+</div>
+<div class="paragraph">
+<p>J&#8217;ai implémenté pour vous les tests, il ne reste plus qu&#8217;a les faire passer !</p>
+</div>
+<div class="sect3">
+<h4 id="_junit_et_maven"><a class="anchor" href="#_junit_et_maven"></a><a class="link" href="#_junit_et_maven">4.3.1. JUnit et Maven</a></h4>
+<div class="paragraph">
+<p>Pour utiliser les tests unitaires, il faut rajouter JUnit en dépendance maven.</p>
+</div>
+<div class="paragraph">
+<p>Ajoutez les dépendances suivant dans votre pom.xml</p>
+</div>
+<div class="listingblock">
+<div class="title">pom.xml</div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="xml"><span class="tok-nt">&lt;dependency&gt;</span>
+    <span class="tok-nt">&lt;groupId&gt;</span>org.junit.jupiter<span class="tok-nt">&lt;/groupId&gt;</span>
+    <span class="tok-nt">&lt;artifactId&gt;</span>junit-jupiter-api<span class="tok-nt">&lt;/artifactId&gt;</span> <i class="conum" data-value="1"></i><b>(1)</b>
+    <span class="tok-nt">&lt;version&gt;</span>5.3.1<span class="tok-nt">&lt;/version&gt;</span>
+    <span class="tok-nt">&lt;scope&gt;</span>test<span class="tok-nt">&lt;/scope&gt;</span>
+<span class="tok-nt">&lt;/dependency&gt;</span>
+<span class="tok-nt">&lt;dependency&gt;</span>
+    <span class="tok-nt">&lt;groupId&gt;</span>org.junit.jupiter<span class="tok-nt">&lt;/groupId&gt;</span>
+    <span class="tok-nt">&lt;artifactId&gt;</span>junit-jupiter-engine<span class="tok-nt">&lt;/artifactId&gt;</span> <i class="conum" data-value="2"></i><b>(2)</b>
+    <span class="tok-nt">&lt;version&gt;</span>5.3.1<span class="tok-nt">&lt;/version&gt;</span>
+    <span class="tok-nt">&lt;scope&gt;</span>test<span class="tok-nt">&lt;/scope&gt;</span>
+<span class="tok-nt">&lt;/dependency&gt;</span>
+<span class="tok-nt">&lt;dependency&gt;</span>
+    <span class="tok-nt">&lt;groupId&gt;</span>org.mockito<span class="tok-nt">&lt;/groupId&gt;</span>
+    <span class="tok-nt">&lt;artifactId&gt;</span>mockito-core<span class="tok-nt">&lt;/artifactId&gt;</span>
+    <span class="tok-nt">&lt;version&gt;</span>2.23.0<span class="tok-nt">&lt;/version&gt;</span>
+    <span class="tok-nt">&lt;scope&gt;</span>test<span class="tok-nt">&lt;/scope&gt;</span>
+<span class="tok-nt">&lt;/dependency&gt;</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>L&#8217;API de JUnit 5</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Le moteur d&#8217;exécution</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Il vous faut également surcharger la version du <code>maven-surefire-plugin</code>
+(qui est le plugin maven qui implémente la phase d&#8217;exécution des tests).</p>
+</div>
+<div class="listingblock">
+<div class="title">pom.xml</div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="xml"><span class="tok-nt">&lt;pluginManagement&gt;</span>
+    <span class="tok-nt">&lt;plugins&gt;</span>
+        <span class="tok-nt">&lt;plugin&gt;</span>
+            <span class="tok-nt">&lt;artifactId&gt;</span>maven-war-plugin<span class="tok-nt">&lt;/artifactId&gt;</span>
+            <span class="tok-nt">&lt;version&gt;</span>3.2.2<span class="tok-nt">&lt;/version&gt;</span>
+        <span class="tok-nt">&lt;/plugin&gt;</span>
+        <span class="tok-nt">&lt;plugin&gt;</span>
+            <span class="tok-nt">&lt;artifactId&gt;</span>maven-surefire-plugin<span class="tok-nt">&lt;/artifactId&gt;</span>
+            <span class="tok-nt">&lt;version&gt;</span>2.22.1<span class="tok-nt">&lt;/version&gt;</span> <i class="conum" data-value="1"></i><b>(1)</b>
+        <span class="tok-nt">&lt;/plugin&gt;</span>
+    <span class="tok-nt">&lt;/plugins&gt;</span>
+<span class="tok-nt">&lt;/pluginManagement&gt;</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>On a besoin de la version 2.22.0 minimum pour JUnit 5 comme indiqué
+<a href="https://junit.org/junit5/docs/current/user-guide/#running-tests-build-maven">dans la documentation junit</a></td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_le_test_unitaire"><a class="anchor" href="#_le_test_unitaire"></a><a class="link" href="#_le_test_unitaire">4.3.2. Le test unitaire</a></h4>
+<div class="paragraph">
+<p>Implémentez le test unitaire suivant :</p>
+</div>
+<div class="listingblock">
+<div class="title">DispatcherServletTest.java</div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="java"><span class="tok-kd">class</span> <span class="tok-nc">DispatcherServletTest</span> <span class="tok-o">{</span> <i class="conum" data-value="1"></i><b>(1)</b>
+
+    <span class="tok-nd">@Nested</span> <i class="conum" data-value="2"></i><b>(2)</b>
+    <span class="tok-kd">class</span> <span class="tok-nc">RegisterController</span><span class="tok-o">{</span> <i class="conum" data-value="2"></i><b>(2)</b>
+
+        <span class="tok-nd">@Test</span> <i class="conum" data-value="3"></i><b>(3)</b>
+        <span class="tok-kt">void</span> <span class="tok-nf">registerController_throwsIllegalArgumentException_forNonControllerClasses</span><span class="tok-o">()</span> <span class="tok-o">{</span>
+            <span class="tok-n">var</span> <span class="tok-n">servlet</span> <span class="tok-o">=</span> <span class="tok-k">new</span> <span class="tok-n">DispatcherServlet</span><span class="tok-o">();</span>
+
+            <span class="tok-n">assertThrows</span><span class="tok-o">(</span><span class="tok-n">IllegalArgumentException</span><span class="tok-o">.</span><span class="tok-na">class</span><span class="tok-o">,</span> <span class="tok-o">()</span> <span class="tok-o">-&gt;</span> <span class="tok-n">servlet</span><span class="tok-o">.</span><span class="tok-na">registerController</span><span class="tok-o">(</span><span class="tok-n">String</span><span class="tok-o">.</span><span class="tok-na">class</span><span class="tok-o">));</span>
+            <span class="tok-n">assertThrows</span><span class="tok-o">(</span><span class="tok-n">IllegalArgumentException</span><span class="tok-o">.</span><span class="tok-na">class</span><span class="tok-o">,</span> <span class="tok-o">()</span> <span class="tok-o">-&gt;</span> <span class="tok-n">servlet</span><span class="tok-o">.</span><span class="tok-na">registerController</span><span class="tok-o">(</span><span class="tok-n">SomeEmptyClass</span><span class="tok-o">.</span><span class="tok-na">class</span><span class="tok-o">));</span>
+        <span class="tok-o">}</span>
+
+        <span class="tok-nd">@Test</span>
+        <span class="tok-kt">void</span> <span class="tok-nf">registerController_doesNotRegisters_nonAnnotatedMethods</span><span class="tok-o">()</span> <span class="tok-o">{</span>
+            <span class="tok-n">var</span> <span class="tok-n">servlet</span> <span class="tok-o">=</span> <span class="tok-k">new</span> <span class="tok-n">DispatcherServlet</span><span class="tok-o">();</span>
+
+            <span class="tok-n">servlet</span><span class="tok-o">.</span><span class="tok-na">registerController</span><span class="tok-o">(</span><span class="tok-n">SomeControllerClassWithAMethod</span><span class="tok-o">.</span><span class="tok-na">class</span><span class="tok-o">);</span>
+
+            <span class="tok-n">assertTrue</span><span class="tok-o">(</span><span class="tok-n">servlet</span><span class="tok-o">.</span><span class="tok-na">getMappings</span><span class="tok-o">().</span><span class="tok-na">isEmpty</span><span class="tok-o">());</span>
+        <span class="tok-o">}</span>
+
+        <span class="tok-nd">@Test</span>
+        <span class="tok-kt">void</span> <span class="tok-nf">registerController_doesNotRegisters_voidReturningMethods</span><span class="tok-o">()</span> <span class="tok-o">{</span>
+            <span class="tok-n">var</span> <span class="tok-n">servlet</span> <span class="tok-o">=</span> <span class="tok-k">new</span> <span class="tok-n">DispatcherServlet</span><span class="tok-o">();</span>
+
+            <span class="tok-n">servlet</span><span class="tok-o">.</span><span class="tok-na">registerController</span><span class="tok-o">(</span><span class="tok-n">SomeControllerClassWithAVoidMethod</span><span class="tok-o">.</span><span class="tok-na">class</span><span class="tok-o">);</span>
+
+            <span class="tok-n">assertTrue</span><span class="tok-o">(</span><span class="tok-n">servlet</span><span class="tok-o">.</span><span class="tok-na">getMappings</span><span class="tok-o">().</span><span class="tok-na">isEmpty</span><span class="tok-o">());</span>
+        <span class="tok-o">}</span>
+
+        <span class="tok-nd">@Test</span>
+        <span class="tok-kt">void</span> <span class="tok-nf">registerController_shouldRegisterCorrectyMethods</span><span class="tok-o">(){</span>
+            <span class="tok-n">var</span> <span class="tok-n">servlet</span> <span class="tok-o">=</span> <span class="tok-k">new</span> <span class="tok-n">DispatcherServlet</span><span class="tok-o">();</span>
+
+            <span class="tok-n">servlet</span><span class="tok-o">.</span><span class="tok-na">registerController</span><span class="tok-o">(</span><span class="tok-n">SomeControllerClass</span><span class="tok-o">.</span><span class="tok-na">class</span><span class="tok-o">);</span>
+            <span class="tok-n">servlet</span><span class="tok-o">.</span><span class="tok-na">registerController</span><span class="tok-o">(</span><span class="tok-n">SomeOtherControllerClass</span><span class="tok-o">.</span><span class="tok-na">class</span><span class="tok-o">);</span>
+
+            <span class="tok-n">assertEquals</span><span class="tok-o">(</span><span class="tok-s">&quot;someGoodMethod&quot;</span><span class="tok-o">,</span> <span class="tok-n">servlet</span><span class="tok-o">.</span><span class="tok-na">getMappingForUri</span><span class="tok-o">(</span><span class="tok-s">&quot;/test&quot;</span><span class="tok-o">).</span><span class="tok-na">getName</span><span class="tok-o">());</span>
+            <span class="tok-n">assertEquals</span><span class="tok-o">(</span><span class="tok-s">&quot;someOtherNiceMethod&quot;</span><span class="tok-o">,</span> <span class="tok-n">servlet</span><span class="tok-o">.</span><span class="tok-na">getMappingForUri</span><span class="tok-o">(</span><span class="tok-s">&quot;/otherTest&quot;</span><span class="tok-o">).</span><span class="tok-na">getName</span><span class="tok-o">());</span>
+        <span class="tok-o">}</span>
+
+        <span class="tok-nd">@Test</span> <i class="conum" data-value="5"></i><b>(5)</b>
+        <span class="tok-kt">void</span> <span class="tok-nf">registerHelloController_shouldWorkCorrectly</span><span class="tok-o">(){</span>
+            <span class="tok-n">var</span> <span class="tok-n">servlet</span> <span class="tok-o">=</span> <span class="tok-k">new</span> <span class="tok-n">DispatcherServlet</span><span class="tok-o">();</span>
+            <span class="tok-n">servlet</span><span class="tok-o">.</span><span class="tok-na">registerController</span><span class="tok-o">(</span><span class="tok-n">HelloController</span><span class="tok-o">.</span><span class="tok-na">class</span><span class="tok-o">);</span>
+
+            <span class="tok-n">assertEquals</span><span class="tok-o">(</span><span class="tok-s">&quot;sayHello&quot;</span><span class="tok-o">,</span> <span class="tok-n">servlet</span><span class="tok-o">.</span><span class="tok-na">getMappingForUri</span><span class="tok-o">(</span><span class="tok-s">&quot;/hello&quot;</span><span class="tok-o">).</span><span class="tok-na">getName</span><span class="tok-o">());</span>
+            <span class="tok-n">assertEquals</span><span class="tok-o">(</span><span class="tok-s">&quot;sayGoodBye&quot;</span><span class="tok-o">,</span> <span class="tok-n">servlet</span><span class="tok-o">.</span><span class="tok-na">getMappingForUri</span><span class="tok-o">(</span><span class="tok-s">&quot;/bye&quot;</span><span class="tok-o">).</span><span class="tok-na">getName</span><span class="tok-o">());</span>
+            <span class="tok-n">assertEquals</span><span class="tok-o">(</span><span class="tok-s">&quot;explode&quot;</span><span class="tok-o">,</span> <span class="tok-n">servlet</span><span class="tok-o">.</span><span class="tok-na">getMappingForUri</span><span class="tok-o">(</span><span class="tok-s">&quot;/boum&quot;</span><span class="tok-o">).</span><span class="tok-na">getName</span><span class="tok-o">());</span>
+        <span class="tok-o">}</span>
+    <span class="tok-o">}</span>
+
+<span class="tok-o">}</span>
+
+<i class="conum" data-value="4"></i><b>(4)</b>
+<span class="tok-kd">class</span> <span class="tok-nc">SomeEmptyClass</span><span class="tok-o">{}</span>
+
+<span class="tok-nd">@Controller</span>
+<span class="tok-kd">class</span> <span class="tok-nc">SomeControllerClassWithAMethod</span><span class="tok-o">{</span>
+    <span class="tok-kd">public</span> <span class="tok-n">String</span> <span class="tok-nf">myMethod</span><span class="tok-o">(){</span>
+        <span class="tok-k">return</span> <span class="tok-s">&quot;test&quot;</span><span class="tok-o">;</span>
+    <span class="tok-o">}</span>
+<span class="tok-o">}</span>
+
+<span class="tok-nd">@Controller</span>
+<span class="tok-kd">class</span> <span class="tok-nc">SomeControllerClassWithAVoidMethod</span><span class="tok-o">{</span>
+    <span class="tok-nd">@RequestMapping</span><span class="tok-o">(</span><span class="tok-n">uri</span><span class="tok-o">=</span><span class="tok-s">&quot;/test&quot;</span><span class="tok-o">)</span>
+    <span class="tok-kd">public</span> <span class="tok-kt">void</span> <span class="tok-nf">myMethod</span><span class="tok-o">(){}</span>
+<span class="tok-o">}</span>
+
+<span class="tok-nd">@Controller</span>
+<span class="tok-kd">class</span> <span class="tok-nc">SomeControllerClass</span> <span class="tok-o">{</span>
+    <span class="tok-nd">@RequestMapping</span><span class="tok-o">(</span><span class="tok-n">uri</span><span class="tok-o">=</span><span class="tok-s">&quot;/test&quot;</span><span class="tok-o">)</span>
+    <span class="tok-kd">public</span> <span class="tok-n">String</span> <span class="tok-nf">someGoodMethod</span><span class="tok-o">(){</span>
+        <span class="tok-k">return</span> <span class="tok-s">&quot;Hello&quot;</span><span class="tok-o">;</span>
+    <span class="tok-o">}</span>
+
+    <span class="tok-nd">@RequestMapping</span><span class="tok-o">(</span><span class="tok-n">uri</span><span class="tok-o">=</span><span class="tok-s">&quot;/test-throwing&quot;</span><span class="tok-o">)</span>
+    <span class="tok-kd">public</span> <span class="tok-n">String</span> <span class="tok-nf">someThrowingMethod</span><span class="tok-o">(){</span>
+        <span class="tok-k">throw</span> <span class="tok-k">new</span> <span class="tok-n">RuntimeException</span><span class="tok-o">(</span><span class="tok-s">&quot;some exception message&quot;</span><span class="tok-o">);</span>
+    <span class="tok-o">}</span>
+
+    <span class="tok-nd">@RequestMapping</span><span class="tok-o">(</span><span class="tok-n">uri</span><span class="tok-o">=</span><span class="tok-s">&quot;/test-with-params&quot;</span><span class="tok-o">)</span>
+    <span class="tok-kd">public</span> <span class="tok-n">String</span> <span class="tok-nf">someThrowingMethod</span><span class="tok-o">(</span><span class="tok-n">Map</span><span class="tok-o">&lt;</span><span class="tok-n">String</span><span class="tok-o">,</span> <span class="tok-n">String</span><span class="tok-o">[]&gt;</span> <span class="tok-n">params</span><span class="tok-o">){</span>
+        <span class="tok-k">return</span> <span class="tok-n">params</span><span class="tok-o">.</span><span class="tok-na">get</span><span class="tok-o">(</span><span class="tok-s">&quot;id&quot;</span><span class="tok-o">)[</span><span class="tok-mi">0</span><span class="tok-o">];</span>
+    <span class="tok-o">}</span>
+<span class="tok-o">}</span>
+
+<span class="tok-nd">@Controller</span>
+<span class="tok-kd">class</span> <span class="tok-nc">SomeOtherControllerClass</span> <span class="tok-o">{</span>
+    <span class="tok-nd">@RequestMapping</span><span class="tok-o">(</span><span class="tok-n">uri</span><span class="tok-o">=</span><span class="tok-s">&quot;/otherTest&quot;</span><span class="tok-o">)</span>
+    <span class="tok-kd">public</span> <span class="tok-n">String</span> <span class="tok-nf">someOtherNiceMethod</span><span class="tok-o">(){</span>
+        <span class="tok-k">return</span> <span class="tok-s">&quot;Hello again&quot;</span><span class="tok-o">;</span>
+    <span class="tok-o">}</span>
+<span class="tok-o">}</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Notre classe de test</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>On utilise une sous-classe de tests annotée <code>@Nested</code> pour regrouper nos tests unitaires (disponible en
+<a href="https://junit.org/junit5/docs/5.0.3/user-guide/#writing-tests-nested">Junit 5</a> )</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Nos tests sont annotés <code>@Test</code></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Quelques controlleurs d&#8217;exemple pour valider le fonctionnement de votre implémentation</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>On teste l&#8217;enregistrement du <code>HelloController</code></td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_la_dispatcherservlet_code_à_trous"><a class="anchor" href="#_la_dispatcherservlet_code_à_trous"></a><a class="link" href="#_la_dispatcherservlet_code_à_trous">4.3.3. La DispatcherServlet (code à trous)</a></h4>
+<div class="paragraph">
+<p>Implémentez la servlet suivante :</p>
+</div>
+<div class="listingblock">
+<div class="title">La DispatcherServlet</div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="java"><span class="tok-nd">@WebServlet</span><span class="tok-o">(</span><span class="tok-n">urlPatterns</span> <span class="tok-o">=</span> <span class="tok-s">&quot;/*&quot;</span><span class="tok-o">,</span> <span class="tok-n">loadOnStartup</span> <span class="tok-o">=</span> <span class="tok-mi">1</span><span class="tok-o">)</span>
+<span class="tok-kd">public</span> <span class="tok-kd">class</span> <span class="tok-nc">DispatcherServlet</span> <span class="tok-kd">extends</span> <span class="tok-n">HttpServlet</span> <span class="tok-o">{</span>
+
+    <span class="tok-kd">private</span> <span class="tok-n">Map</span><span class="tok-o">&lt;</span><span class="tok-n">String</span><span class="tok-o">,</span> <span class="tok-n">Method</span><span class="tok-o">&gt;</span> <span class="tok-n">uriMappings</span> <span class="tok-o">=</span> <span class="tok-k">new</span> <span class="tok-n">HashMap</span><span class="tok-o">&lt;&gt;();</span> <i class="conum" data-value="1"></i><b>(1)</b>
+
+    <span class="tok-nd">@Override</span>
+    <span class="tok-kd">protected</span> <span class="tok-kt">void</span> <span class="tok-nf">doGet</span><span class="tok-o">(</span><span class="tok-n">HttpServletRequest</span> <span class="tok-n">req</span><span class="tok-o">,</span> <span class="tok-n">HttpServletResponse</span> <span class="tok-n">resp</span><span class="tok-o">)</span> <span class="tok-kd">throws</span> <span class="tok-n">ServletException</span><span class="tok-o">,</span> <span class="tok-n">IOException</span> <span class="tok-o">{</span>
+        <span class="tok-n">System</span><span class="tok-o">.</span><span class="tok-na">out</span><span class="tok-o">.</span><span class="tok-na">println</span><span class="tok-o">(</span><span class="tok-s">&quot;Getting request for &quot;</span> <span class="tok-o">+</span> <span class="tok-n">req</span><span class="tok-o">.</span><span class="tok-na">getRequestURI</span><span class="tok-o">());</span>
+        <span class="tok-c1">// TODO </span><i class="conum" data-value="3"></i><b>(3)</b>
+    <span class="tok-o">}</span>
+
+    <span class="tok-nd">@Override</span>
+    <span class="tok-kd">public</span> <span class="tok-kt">void</span> <span class="tok-nf">init</span><span class="tok-o">(</span><span class="tok-n">ServletConfig</span> <span class="tok-n">config</span><span class="tok-o">)</span> <span class="tok-kd">throws</span> <span class="tok-n">ServletException</span> <span class="tok-o">{</span>
+        <span class="tok-kd">super</span><span class="tok-o">.</span><span class="tok-na">init</span><span class="tok-o">(</span><span class="tok-n">config</span><span class="tok-o">);</span>
+        <span class="tok-c1">// on enregistre notre controller au démarrage de la servlet</span>
+        <span class="tok-k">this</span><span class="tok-o">.</span><span class="tok-na">registerController</span><span class="tok-o">(</span><span class="tok-n">HelloController</span><span class="tok-o">.</span><span class="tok-na">class</span><span class="tok-o">);</span>
+    <span class="tok-o">}</span>
+
+    <span class="tok-kd">protected</span> <span class="tok-kt">void</span> <span class="tok-nf">registerController</span><span class="tok-o">(</span><span class="tok-n">Class</span> <span class="tok-n">controllerClass</span><span class="tok-o">){</span>
+        <span class="tok-n">System</span><span class="tok-o">.</span><span class="tok-na">out</span><span class="tok-o">.</span><span class="tok-na">println</span><span class="tok-o">(</span><span class="tok-s">&quot;Analysing class &quot;</span> <span class="tok-o">+</span> <span class="tok-n">controllerClass</span><span class="tok-o">.</span><span class="tok-na">getName</span><span class="tok-o">());</span>
+
+        <span class="tok-c1">// TODO </span><i class="conum" data-value="2"></i><b>(2)</b>
+    <span class="tok-o">}</span>
+
+    <span class="tok-kd">protected</span> <span class="tok-kt">void</span> <span class="tok-nf">registerMethod</span><span class="tok-o">(</span><span class="tok-n">Object</span> <span class="tok-n">controller</span><span class="tok-o">,</span> <span class="tok-n">Method</span> <span class="tok-n">method</span><span class="tok-o">)</span> <span class="tok-o">{</span>
+        <span class="tok-n">System</span><span class="tok-o">.</span><span class="tok-na">out</span><span class="tok-o">.</span><span class="tok-na">println</span><span class="tok-o">(</span><span class="tok-s">&quot;Registering method &quot;</span> <span class="tok-o">+</span> <span class="tok-n">method</span><span class="tok-o">.</span><span class="tok-na">getName</span><span class="tok-o">());</span>
+
+        <span class="tok-c1">// TODO </span><i class="conum" data-value="2"></i><b>(2)</b>
+    <span class="tok-o">}</span>
+
+    <span class="tok-kd">protected</span> <span class="tok-n">Map</span><span class="tok-o">&lt;</span><span class="tok-n">String</span><span class="tok-o">,</span> <span class="tok-n">Method</span><span class="tok-o">&gt;</span> <span class="tok-nf">getMappings</span><span class="tok-o">(){</span>
+        <span class="tok-k">return</span> <span class="tok-k">this</span><span class="tok-o">.</span><span class="tok-na">mappings</span><span class="tok-o">;</span>
+    <span class="tok-o">}</span>
+
+    <span class="tok-kd">protected</span> <span class="tok-n">Method</span> <span class="tok-nf">getMappingForUri</span><span class="tok-o">(</span><span class="tok-n">String</span> <span class="tok-n">uri</span><span class="tok-o">){</span>
+        <span class="tok-k">return</span> <span class="tok-k">this</span><span class="tok-o">.</span><span class="tok-na">mappings</span><span class="tok-o">.</span><span class="tok-na">get</span><span class="tok-o">(</span><span class="tok-n">uri</span><span class="tok-o">);</span>
+    <span class="tok-o">}</span>
+<span class="tok-o">}</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Cette <code>Map</code> va contenir l&#8217;association entre une URI et la méthode Java qui l&#8217;écoute (annotée <code>@RequestMapping</code>)</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>C&#8217;est là qu&#8217;il faut coder !</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Cette méthode sera implémentée dans la partie <a href="#_le_routage_des_requêtes_code_à_trous">4.4</a></td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Il faut maintenant implémenter les méthodes <code>registerController</code> et <code>registerMethod</code> pour faire passer les tests unitaires.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Cette partie fait un usage intensif de l&#8217;api <code>java.lang.reflect</code></p>
+</div>
+<div class="paragraph">
+<p>Vous aurez surement besoin des méthodes</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>getAnnotation</p>
+</li>
+<li>
+<p>getDeclaredMethods</p>
+</li>
+<li>
+<p>getDeclaredAnnotation</p>
+</li>
+<li>
+<p>newInstance</p>
+</li>
+<li>
+<p>etc&#8230;&#8203;</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_le_routage_des_requêtes_code_à_trous"><a class="anchor" href="#_le_routage_des_requêtes_code_à_trous"></a><a class="link" href="#_le_routage_des_requêtes_code_à_trous">4.4. Le routage des requêtes (code à trous)</a></h3>
+<div class="paragraph">
+<p>Une fois les annotations analysées, le routage des requêtes se fait de la manière suivante :</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Récupération de l&#8217;URI entrante (depuis l&#8217;objet HttpServletRequest)</p>
+</li>
+<li>
+<p>Récupération de la méthode implémentant l&#8217;URI (issue de l&#8217;analyse du code)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Si aucune méthode n&#8217;est trouvée, renvoyer une erreur 404</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Instanciation du controller</p>
+</li>
+<li>
+<p>Récupération des paramètres (depuis l&#8217;objet HttpServletRequest)</p>
+</li>
+<li>
+<p>Appel de la méthode (avec les paramètres ou non)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>En cas d&#8217;exception, renvoyer une erreur 500 avec le message de l&#8217;exception</p>
+</li>
+<li>
+<p>En cas de succès, récupérer le résultat de l&#8217;appel, et renvoyer le résultat convertit en chaîne de caractères</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Nous devons donc ici, implémenter la méthode <code>doGet</code> de notre <code>DispatcherServlet</code>.</p>
+</div>
+<div class="sect3">
+<h4 id="_les_tests_unitaires_du_routage"><a class="anchor" href="#_les_tests_unitaires_du_routage"></a><a class="link" href="#_les_tests_unitaires_du_routage">4.4.1. Les tests unitaires du routage</a></h4>
+<div class="paragraph">
+<p>Ajoutez la sous classe de tests suivante dans le test unitaire de la <code>DispatcherServlet</code> :</p>
+</div>
+<div class="listingblock">
+<div class="title">Les tests unitaires du routage</div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="java"><span class="tok-nd">@Nested</span> <i class="conum" data-value="1"></i><b>(1)</b>
+<span class="tok-kd">class</span> <span class="tok-nc">DoGet</span><span class="tok-o">{</span>
+
+    <span class="tok-nd">@Test</span>
+    <span class="tok-kt">void</span> <span class="tok-nf">doGet_shouldReturn404_whenNotMethodIsFound</span><span class="tok-o">()</span> <span class="tok-kd">throws</span> <span class="tok-n">ServletException</span><span class="tok-o">,</span> <span class="tok-n">IOException</span> <span class="tok-o">{</span>
+        <span class="tok-n">var</span> <span class="tok-n">servlet</span> <span class="tok-o">=</span> <span class="tok-k">new</span> <span class="tok-n">DispatcherServlet</span><span class="tok-o">();</span>
+
+        <span class="tok-n">var</span> <span class="tok-n">req</span> <span class="tok-o">=</span> <span class="tok-n">mock</span><span class="tok-o">(</span><span class="tok-n">HttpServletRequest</span><span class="tok-o">.</span><span class="tok-na">class</span><span class="tok-o">);</span>
+        <span class="tok-n">var</span> <span class="tok-n">resp</span> <span class="tok-o">=</span> <span class="tok-n">mock</span><span class="tok-o">(</span><span class="tok-n">HttpServletResponse</span><span class="tok-o">.</span><span class="tok-na">class</span><span class="tok-o">);</span>
+        <span class="tok-n">when</span><span class="tok-o">(</span><span class="tok-n">req</span><span class="tok-o">.</span><span class="tok-na">getRequestURI</span><span class="tok-o">()).</span><span class="tok-na">thenReturn</span><span class="tok-o">(</span><span class="tok-s">&quot;/test&quot;</span><span class="tok-o">);</span>
+
+        <span class="tok-n">servlet</span><span class="tok-o">.</span><span class="tok-na">doGet</span><span class="tok-o">(</span><span class="tok-n">req</span><span class="tok-o">,</span> <span class="tok-n">resp</span><span class="tok-o">);</span>
+
+        <span class="tok-n">verify</span><span class="tok-o">(</span><span class="tok-n">resp</span><span class="tok-o">).</span><span class="tok-na">sendError</span><span class="tok-o">(</span><span class="tok-mi">404</span><span class="tok-o">,</span> <span class="tok-s">&quot;no mapping found for request uri /test&quot;</span><span class="tok-o">);</span>
+    <span class="tok-o">}</span>
+
+    <span class="tok-nd">@Test</span>
+    <span class="tok-kt">void</span> <span class="tok-nf">doGet_shouldReturn500WithMessage_whenMethodThrowsException</span><span class="tok-o">()</span> <span class="tok-kd">throws</span> <span class="tok-n">ServletException</span><span class="tok-o">,</span> <span class="tok-n">IOException</span> <span class="tok-o">{</span>
+        <span class="tok-n">var</span> <span class="tok-n">servlet</span> <span class="tok-o">=</span> <span class="tok-k">new</span> <span class="tok-n">DispatcherServlet</span><span class="tok-o">();</span>
+
+        <span class="tok-n">servlet</span><span class="tok-o">.</span><span class="tok-na">registerController</span><span class="tok-o">(</span><span class="tok-n">SomeControllerClass</span><span class="tok-o">.</span><span class="tok-na">class</span><span class="tok-o">);</span>
+
+        <span class="tok-n">var</span> <span class="tok-n">req</span> <span class="tok-o">=</span> <span class="tok-n">mock</span><span class="tok-o">(</span><span class="tok-n">HttpServletRequest</span><span class="tok-o">.</span><span class="tok-na">class</span><span class="tok-o">);</span>
+        <span class="tok-n">var</span> <span class="tok-n">resp</span> <span class="tok-o">=</span> <span class="tok-n">mock</span><span class="tok-o">(</span><span class="tok-n">HttpServletResponse</span><span class="tok-o">.</span><span class="tok-na">class</span><span class="tok-o">);</span>
+        <span class="tok-n">when</span><span class="tok-o">(</span><span class="tok-n">req</span><span class="tok-o">.</span><span class="tok-na">getRequestURI</span><span class="tok-o">()).</span><span class="tok-na">thenReturn</span><span class="tok-o">(</span><span class="tok-s">&quot;/test-throwing&quot;</span><span class="tok-o">);</span>
+
+        <span class="tok-n">servlet</span><span class="tok-o">.</span><span class="tok-na">doGet</span><span class="tok-o">(</span><span class="tok-n">req</span><span class="tok-o">,</span> <span class="tok-n">resp</span><span class="tok-o">);</span>
+
+        <span class="tok-n">verify</span><span class="tok-o">(</span><span class="tok-n">resp</span><span class="tok-o">).</span><span class="tok-na">sendError</span><span class="tok-o">(</span><span class="tok-mi">500</span><span class="tok-o">,</span> <span class="tok-s">&quot;exception when calling method someThrowingMethod : some exception message&quot;</span><span class="tok-o">);</span>
+    <span class="tok-o">}</span>
+
+    <span class="tok-nd">@Test</span>
+    <span class="tok-kt">void</span> <span class="tok-nf">doGet_shouldReturnAResult_whenMethodSucceeds</span><span class="tok-o">()</span> <span class="tok-kd">throws</span> <span class="tok-n">ServletException</span><span class="tok-o">,</span> <span class="tok-n">IOException</span> <span class="tok-o">{</span>
+        <span class="tok-n">var</span> <span class="tok-n">servlet</span> <span class="tok-o">=</span> <span class="tok-k">new</span> <span class="tok-n">DispatcherServlet</span><span class="tok-o">();</span>
+
+        <span class="tok-n">servlet</span><span class="tok-o">.</span><span class="tok-na">registerController</span><span class="tok-o">(</span><span class="tok-n">SomeControllerClass</span><span class="tok-o">.</span><span class="tok-na">class</span><span class="tok-o">);</span>
+
+        <span class="tok-n">var</span> <span class="tok-n">req</span> <span class="tok-o">=</span> <span class="tok-n">mock</span><span class="tok-o">(</span><span class="tok-n">HttpServletRequest</span><span class="tok-o">.</span><span class="tok-na">class</span><span class="tok-o">);</span>
+        <span class="tok-n">var</span> <span class="tok-n">resp</span> <span class="tok-o">=</span> <span class="tok-n">mock</span><span class="tok-o">(</span><span class="tok-n">HttpServletResponse</span><span class="tok-o">.</span><span class="tok-na">class</span><span class="tok-o">);</span>
+        <span class="tok-n">var</span> <span class="tok-n">printWriter</span> <span class="tok-o">=</span> <span class="tok-n">mock</span><span class="tok-o">(</span><span class="tok-n">PrintWriter</span><span class="tok-o">.</span><span class="tok-na">class</span><span class="tok-o">);</span>
+
+        <span class="tok-n">when</span><span class="tok-o">(</span><span class="tok-n">resp</span><span class="tok-o">.</span><span class="tok-na">getWriter</span><span class="tok-o">()).</span><span class="tok-na">thenReturn</span><span class="tok-o">(</span><span class="tok-n">printWriter</span><span class="tok-o">);</span>
+        <span class="tok-n">when</span><span class="tok-o">(</span><span class="tok-n">req</span><span class="tok-o">.</span><span class="tok-na">getRequestURI</span><span class="tok-o">()).</span><span class="tok-na">thenReturn</span><span class="tok-o">(</span><span class="tok-s">&quot;/test&quot;</span><span class="tok-o">);</span>
+
+        <span class="tok-n">servlet</span><span class="tok-o">.</span><span class="tok-na">doGet</span><span class="tok-o">(</span><span class="tok-n">req</span><span class="tok-o">,</span> <span class="tok-n">resp</span><span class="tok-o">);</span>
+
+        <span class="tok-n">verify</span><span class="tok-o">(</span><span class="tok-n">printWriter</span><span class="tok-o">).</span><span class="tok-na">print</span><span class="tok-o">(</span><span class="tok-s">&quot;Hello&quot;</span><span class="tok-o">);</span>
+    <span class="tok-o">}</span>
+
+    <span class="tok-nd">@Test</span>
+    <span class="tok-kt">void</span> <span class="tok-nf">doGet_shouldReturnAResult_whenMethodWithParametersSucceeds</span><span class="tok-o">()</span> <span class="tok-kd">throws</span> <span class="tok-n">ServletException</span><span class="tok-o">,</span> <span class="tok-n">IOException</span> <span class="tok-o">{</span>
+        <span class="tok-n">var</span> <span class="tok-n">servlet</span> <span class="tok-o">=</span> <span class="tok-k">new</span> <span class="tok-n">DispatcherServlet</span><span class="tok-o">();</span>
+
+        <span class="tok-n">servlet</span><span class="tok-o">.</span><span class="tok-na">registerController</span><span class="tok-o">(</span><span class="tok-n">SomeControllerClass</span><span class="tok-o">.</span><span class="tok-na">class</span><span class="tok-o">);</span>
+
+        <span class="tok-n">var</span> <span class="tok-n">req</span> <span class="tok-o">=</span> <span class="tok-n">mock</span><span class="tok-o">(</span><span class="tok-n">HttpServletRequest</span><span class="tok-o">.</span><span class="tok-na">class</span><span class="tok-o">);</span>
+        <span class="tok-n">var</span> <span class="tok-n">resp</span> <span class="tok-o">=</span> <span class="tok-n">mock</span><span class="tok-o">(</span><span class="tok-n">HttpServletResponse</span><span class="tok-o">.</span><span class="tok-na">class</span><span class="tok-o">);</span>
+        <span class="tok-n">var</span> <span class="tok-n">printWriter</span> <span class="tok-o">=</span> <span class="tok-n">mock</span><span class="tok-o">(</span><span class="tok-n">PrintWriter</span><span class="tok-o">.</span><span class="tok-na">class</span><span class="tok-o">);</span>
+
+        <span class="tok-n">when</span><span class="tok-o">(</span><span class="tok-n">req</span><span class="tok-o">.</span><span class="tok-na">getRequestURI</span><span class="tok-o">()).</span><span class="tok-na">thenReturn</span><span class="tok-o">(</span><span class="tok-s">&quot;/test-with-params&quot;</span><span class="tok-o">);</span>
+        <span class="tok-n">when</span><span class="tok-o">(</span><span class="tok-n">req</span><span class="tok-o">.</span><span class="tok-na">getParameterMap</span><span class="tok-o">()).</span><span class="tok-na">thenReturn</span><span class="tok-o">(</span><span class="tok-n">Map</span><span class="tok-o">.</span><span class="tok-na">of</span><span class="tok-o">(</span><span class="tok-s">&quot;id&quot;</span><span class="tok-o">,</span> <span class="tok-k">new</span> <span class="tok-n">String</span><span class="tok-o">[]{</span><span class="tok-s">&quot;12&quot;</span><span class="tok-o">}));</span>
+        <span class="tok-n">when</span><span class="tok-o">(</span><span class="tok-n">resp</span><span class="tok-o">.</span><span class="tok-na">getWriter</span><span class="tok-o">()).</span><span class="tok-na">thenReturn</span><span class="tok-o">(</span><span class="tok-n">printWriter</span><span class="tok-o">);</span>
+
+        <span class="tok-n">servlet</span><span class="tok-o">.</span><span class="tok-na">doGet</span><span class="tok-o">(</span><span class="tok-n">req</span><span class="tok-o">,</span> <span class="tok-n">resp</span><span class="tok-o">);</span>
+
+        <span class="tok-n">verify</span><span class="tok-o">(</span><span class="tok-n">printWriter</span><span class="tok-o">).</span><span class="tok-na">print</span><span class="tok-o">(</span><span class="tok-s">&quot;12&quot;</span><span class="tok-o">);</span>
+    <span class="tok-o">}</span>
+
+    <span class="tok-nd">@Test</span>
+    <span class="tok-kt">void</span> <span class="tok-nf">doGet_shouldReturnAResult_forHelloController</span><span class="tok-o">()</span> <span class="tok-kd">throws</span> <span class="tok-n">ServletException</span><span class="tok-o">,</span> <span class="tok-n">IOException</span> <span class="tok-o">{</span>
+        <span class="tok-n">var</span> <span class="tok-n">servlet</span> <span class="tok-o">=</span> <span class="tok-k">new</span> <span class="tok-n">DispatcherServlet</span><span class="tok-o">();</span>
+        <span class="tok-n">servlet</span><span class="tok-o">.</span><span class="tok-na">registerController</span><span class="tok-o">(</span><span class="tok-n">HelloController</span><span class="tok-o">.</span><span class="tok-na">class</span><span class="tok-o">);</span>
+
+        <span class="tok-n">var</span> <span class="tok-n">req</span> <span class="tok-o">=</span> <span class="tok-n">mock</span><span class="tok-o">(</span><span class="tok-n">HttpServletRequest</span><span class="tok-o">.</span><span class="tok-na">class</span><span class="tok-o">);</span>
+        <span class="tok-n">var</span> <span class="tok-n">resp</span> <span class="tok-o">=</span> <span class="tok-n">mock</span><span class="tok-o">(</span><span class="tok-n">HttpServletResponse</span><span class="tok-o">.</span><span class="tok-na">class</span><span class="tok-o">);</span>
+        <span class="tok-n">var</span> <span class="tok-n">printWriter</span> <span class="tok-o">=</span> <span class="tok-n">mock</span><span class="tok-o">(</span><span class="tok-n">PrintWriter</span><span class="tok-o">.</span><span class="tok-na">class</span><span class="tok-o">);</span>
+
+        <span class="tok-n">when</span><span class="tok-o">(</span><span class="tok-n">req</span><span class="tok-o">.</span><span class="tok-na">getRequestURI</span><span class="tok-o">()).</span><span class="tok-na">thenReturn</span><span class="tok-o">(</span><span class="tok-s">&quot;/hello&quot;</span><span class="tok-o">);</span>
+        <span class="tok-n">when</span><span class="tok-o">(</span><span class="tok-n">resp</span><span class="tok-o">.</span><span class="tok-na">getWriter</span><span class="tok-o">()).</span><span class="tok-na">thenReturn</span><span class="tok-o">(</span><span class="tok-n">printWriter</span><span class="tok-o">);</span>
+
+        <span class="tok-n">servlet</span><span class="tok-o">.</span><span class="tok-na">doGet</span><span class="tok-o">(</span><span class="tok-n">req</span><span class="tok-o">,</span> <span class="tok-n">resp</span><span class="tok-o">);</span>
+
+        <span class="tok-n">verify</span><span class="tok-o">(</span><span class="tok-n">printWriter</span><span class="tok-o">).</span><span class="tok-na">print</span><span class="tok-o">(</span><span class="tok-s">&quot;Hello World !&quot;</span><span class="tok-o">);</span>
+    <span class="tok-o">}</span>
+
+<span class="tok-o">}</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Ajoutez cette classe en sous-classe de la classe <code>DispatcherServletTest</code></td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Ces tests unitaires valident que les méthodes sont correctement appelées et que les erreurs sont renvoyées.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Une fois tous les tests au vert <span class="icon"><i class="fa fa-grin-stars"></i></span>, vous pouvez démarrer votre projet et requêter via votre navigateur web :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://localhost:8080/hello" class="bare">http://localhost:8080/hello</a></p>
+</li>
+<li>
+<p><a href="http://localhost:8080/bye" class="bare">http://localhost:8080/bye</a></p>
+</li>
+<li>
+<p><a href="http://localhost:8080/boum" class="bare">http://localhost:8080/boum</a></p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_le_micro_service_pokemon"><a class="anchor" href="#_le_micro_service_pokemon"></a><a class="link" href="#_le_micro_service_pokemon">5. Le micro-service Pokemon</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Pour la suite de ce TP, nous allons développer un micro-service pokemon, qui s&#8217;appuiera sur notre DispatcherServlet</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Nous utilisons l&#8217;API HttpClient de Java 11 dans ce TP. Il est donc impératif de travailler avec le JDK 11.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/pokemon-service.svg" alt="pokemon service"></span>
+Le micro-service sera composé de 3 niveaux:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>La DispatcherServlet</p>
+</li>
+<li>
+<p>Le PokemonController, qui va exposer une route dédiée</p>
+</li>
+<li>
+<p>Le PokemonRepository, qui va invoquer une API externe</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Pour avoir quelques données à disposition, nous utiliserons l&#8217;API <a href="https://pokeapi.co" class="bare">https://pokeapi.co</a></p>
+</div>
+<div class="sect2">
+<h3 id="_la_classe_pokemon"><a class="anchor" href="#_la_classe_pokemon"></a><a class="link" href="#_la_classe_pokemon">5.1. La classe Pokemon</a></h3>
+<div class="paragraph">
+<p>Pour commencer, nous allons créer notre objet métier.</p>
+</div>
+<div class="paragraph">
+<p>Pour implémenter notre objet, nous devons nous inspirer des champs que propose l&#8217;API <a href="https://pokeapi.co" class="bare">https://pokeapi.co</a>.</p>
+</div>
+<div class="paragraph">
+<p>Par exemple, voici ce qu&#8217;on obtient en appelant l&#8217;API (un peu simplifié):</p>
+</div>
+<div class="listingblock">
+<div class="title">Electhor !</div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="json"><span class="tok-p">{</span>
+    <span class="tok-nt">&quot;abilities&quot;</span><span class="tok-p">:</span> <span class="tok-p">[],</span>
+    <span class="tok-nt">&quot;base_experience&quot;</span><span class="tok-p">:</span> <span class="tok-mi">261</span><span class="tok-p">,</span>
+    <span class="tok-nt">&quot;forms&quot;</span><span class="tok-p">:</span> <span class="tok-p">[</span>
+        <span class="tok-p">{</span>
+            <span class="tok-nt">&quot;name&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;zapdos&quot;</span><span class="tok-p">,</span>
+            <span class="tok-nt">&quot;url&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;https://pokeapi.co/api/v2/pokemon-form/145/&quot;</span>
+        <span class="tok-p">}</span>
+    <span class="tok-p">],</span>
+    <span class="tok-nt">&quot;height&quot;</span><span class="tok-p">:</span> <span class="tok-mi">16</span><span class="tok-p">,</span>
+    <span class="tok-nt">&quot;id&quot;</span><span class="tok-p">:</span> <span class="tok-mi">145</span><span class="tok-p">,</span>
+    <span class="tok-nt">&quot;location_area_encounters&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;https://pokeapi.co/api/v2/pokemon/145/encounters&quot;</span><span class="tok-p">,</span>
+    <span class="tok-nt">&quot;moves&quot;</span><span class="tok-p">:</span> <span class="tok-p">[],</span>
+    <span class="tok-nt">&quot;name&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;zapdos&quot;</span><span class="tok-p">,</span>
+    <span class="tok-nt">&quot;order&quot;</span><span class="tok-p">:</span> <span class="tok-mi">217</span><span class="tok-p">,</span>
+    <span class="tok-nt">&quot;species&quot;</span><span class="tok-p">:</span> <span class="tok-p">{</span>
+        <span class="tok-nt">&quot;name&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;zapdos&quot;</span><span class="tok-p">,</span>
+        <span class="tok-nt">&quot;url&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;https://pokeapi.co/api/v2/pokemon-species/145/&quot;</span>
+    <span class="tok-p">},</span>
+    <span class="tok-nt">&quot;sprites&quot;</span><span class="tok-p">:</span> <span class="tok-p">{</span>
+        <span class="tok-nt">&quot;back_default&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/145.png&quot;</span><span class="tok-p">,</span>
+        <span class="tok-nt">&quot;back_female&quot;</span><span class="tok-p">:</span> <span class="tok-kc">null</span><span class="tok-p">,</span>
+        <span class="tok-nt">&quot;back_shiny&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/145.png&quot;</span><span class="tok-p">,</span>
+        <span class="tok-nt">&quot;back_shiny_female&quot;</span><span class="tok-p">:</span> <span class="tok-kc">null</span><span class="tok-p">,</span>
+        <span class="tok-nt">&quot;front_default&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/145.png&quot;</span><span class="tok-p">,</span>
+        <span class="tok-nt">&quot;front_female&quot;</span><span class="tok-p">:</span> <span class="tok-kc">null</span><span class="tok-p">,</span>
+        <span class="tok-nt">&quot;front_shiny&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/145.png&quot;</span><span class="tok-p">,</span>
+        <span class="tok-nt">&quot;front_shiny_female&quot;</span><span class="tok-p">:</span> <span class="tok-kc">null</span>
+    <span class="tok-p">},</span>
+    <span class="tok-nt">&quot;stats&quot;</span><span class="tok-p">:</span> <span class="tok-p">[</span>
+        <span class="tok-p">{</span>
+            <span class="tok-nt">&quot;base_stat&quot;</span><span class="tok-p">:</span> <span class="tok-mi">100</span><span class="tok-p">,</span>
+            <span class="tok-nt">&quot;effort&quot;</span><span class="tok-p">:</span> <span class="tok-mi">0</span><span class="tok-p">,</span>
+            <span class="tok-nt">&quot;stat&quot;</span><span class="tok-p">:</span> <span class="tok-p">{</span>
+                <span class="tok-nt">&quot;name&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;speed&quot;</span><span class="tok-p">,</span>
+                <span class="tok-nt">&quot;url&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;https://pokeapi.co/api/v2/stat/6/&quot;</span>
+            <span class="tok-p">}</span>
+        <span class="tok-p">},</span>
+        <span class="tok-p">{</span>
+            <span class="tok-nt">&quot;base_stat&quot;</span><span class="tok-p">:</span> <span class="tok-mi">90</span><span class="tok-p">,</span>
+            <span class="tok-nt">&quot;effort&quot;</span><span class="tok-p">:</span> <span class="tok-mi">0</span><span class="tok-p">,</span>
+            <span class="tok-nt">&quot;stat&quot;</span><span class="tok-p">:</span> <span class="tok-p">{</span>
+                <span class="tok-nt">&quot;name&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;special-defense&quot;</span><span class="tok-p">,</span>
+                <span class="tok-nt">&quot;url&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;https://pokeapi.co/api/v2/stat/5/&quot;</span>
+            <span class="tok-p">}</span>
+        <span class="tok-p">},</span>
+        <span class="tok-p">{</span>
+            <span class="tok-nt">&quot;base_stat&quot;</span><span class="tok-p">:</span> <span class="tok-mi">125</span><span class="tok-p">,</span>
+            <span class="tok-nt">&quot;effort&quot;</span><span class="tok-p">:</span> <span class="tok-mi">3</span><span class="tok-p">,</span>
+            <span class="tok-nt">&quot;stat&quot;</span><span class="tok-p">:</span> <span class="tok-p">{</span>
+                <span class="tok-nt">&quot;name&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;special-attack&quot;</span><span class="tok-p">,</span>
+                <span class="tok-nt">&quot;url&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;https://pokeapi.co/api/v2/stat/4/&quot;</span>
+            <span class="tok-p">}</span>
+        <span class="tok-p">},</span>
+        <span class="tok-p">{</span>
+            <span class="tok-nt">&quot;base_stat&quot;</span><span class="tok-p">:</span> <span class="tok-mi">85</span><span class="tok-p">,</span>
+            <span class="tok-nt">&quot;effort&quot;</span><span class="tok-p">:</span> <span class="tok-mi">0</span><span class="tok-p">,</span>
+            <span class="tok-nt">&quot;stat&quot;</span><span class="tok-p">:</span> <span class="tok-p">{</span>
+                <span class="tok-nt">&quot;name&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;defense&quot;</span><span class="tok-p">,</span>
+                <span class="tok-nt">&quot;url&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;https://pokeapi.co/api/v2/stat/3/&quot;</span>
+            <span class="tok-p">}</span>
+        <span class="tok-p">},</span>
+        <span class="tok-p">{</span>
+            <span class="tok-nt">&quot;base_stat&quot;</span><span class="tok-p">:</span> <span class="tok-mi">90</span><span class="tok-p">,</span>
+            <span class="tok-nt">&quot;effort&quot;</span><span class="tok-p">:</span> <span class="tok-mi">0</span><span class="tok-p">,</span>
+            <span class="tok-nt">&quot;stat&quot;</span><span class="tok-p">:</span> <span class="tok-p">{</span>
+                <span class="tok-nt">&quot;name&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;attack&quot;</span><span class="tok-p">,</span>
+                <span class="tok-nt">&quot;url&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;https://pokeapi.co/api/v2/stat/2/&quot;</span>
+            <span class="tok-p">}</span>
+        <span class="tok-p">},</span>
+        <span class="tok-p">{</span>
+            <span class="tok-nt">&quot;base_stat&quot;</span><span class="tok-p">:</span> <span class="tok-mi">90</span><span class="tok-p">,</span>
+            <span class="tok-nt">&quot;effort&quot;</span><span class="tok-p">:</span> <span class="tok-mi">0</span><span class="tok-p">,</span>
+            <span class="tok-nt">&quot;stat&quot;</span><span class="tok-p">:</span> <span class="tok-p">{</span>
+                <span class="tok-nt">&quot;name&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;hp&quot;</span><span class="tok-p">,</span>
+                <span class="tok-nt">&quot;url&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;https://pokeapi.co/api/v2/stat/1/&quot;</span>
+            <span class="tok-p">}</span>
+        <span class="tok-p">}</span>
+    <span class="tok-p">],</span>
+    <span class="tok-nt">&quot;types&quot;</span><span class="tok-p">:</span> <span class="tok-p">[</span>
+        <span class="tok-p">{</span>
+            <span class="tok-nt">&quot;slot&quot;</span><span class="tok-p">:</span> <span class="tok-mi">2</span><span class="tok-p">,</span>
+            <span class="tok-nt">&quot;type&quot;</span><span class="tok-p">:</span> <span class="tok-p">{</span>
+                <span class="tok-nt">&quot;name&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;flying&quot;</span><span class="tok-p">,</span>
+                <span class="tok-nt">&quot;url&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;https://pokeapi.co/api/v2/type/3/&quot;</span>
+            <span class="tok-p">}</span>
+        <span class="tok-p">},</span>
+        <span class="tok-p">{</span>
+            <span class="tok-nt">&quot;slot&quot;</span><span class="tok-p">:</span> <span class="tok-mi">1</span><span class="tok-p">,</span>
+            <span class="tok-nt">&quot;type&quot;</span><span class="tok-p">:</span> <span class="tok-p">{</span>
+                <span class="tok-nt">&quot;name&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;electric&quot;</span><span class="tok-p">,</span>
+                <span class="tok-nt">&quot;url&quot;</span><span class="tok-p">:</span> <span class="tok-s2">&quot;https://pokeapi.co/api/v2/type/13/&quot;</span>
+            <span class="tok-p">}</span>
+        <span class="tok-p">}</span>
+    <span class="tok-p">],</span>
+    <span class="tok-nt">&quot;weight&quot;</span><span class="tok-p">:</span> <span class="tok-mi">526</span>
+<span class="tok-p">}</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Nous allons donc créer une classe Java qui reprend trait-pour-trait cette structure, mais en ne conservant que les champs
+qui nous intéressent.</p>
+</div>
+<div class="listingblock">
+<div class="title">Pokemon.java</div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="java"><span class="tok-kd">public</span> <span class="tok-kd">class</span> <span class="tok-nc">Pokemon</span> <span class="tok-o">{</span>
+    <i class="conum" data-value="1"></i><b>(1)</b>
+    <span class="tok-kd">private</span> <span class="tok-kt">int</span> <span class="tok-n">id</span><span class="tok-o">;</span>
+
+    <span class="tok-kd">private</span> <span class="tok-n">String</span> <span class="tok-n">name</span><span class="tok-o">;</span>
+
+    <span class="tok-kd">private</span> <span class="tok-n">Sprites</span> <span class="tok-n">sprites</span><span class="tok-o">;</span>
+    <i class="conum" data-value="2"></i><b>(2)</b>
+    <span class="tok-kd">public</span> <span class="tok-kt">int</span> <span class="tok-nf">getId</span><span class="tok-o">()</span> <span class="tok-o">{</span>
+        <span class="tok-k">return</span> <span class="tok-n">id</span><span class="tok-o">;</span>
+    <span class="tok-o">}</span>
+
+    <span class="tok-kd">public</span> <span class="tok-n">String</span> <span class="tok-nf">getName</span><span class="tok-o">()</span> <span class="tok-o">{</span>
+        <span class="tok-k">return</span> <span class="tok-n">name</span><span class="tok-o">;</span>
+    <span class="tok-o">}</span>
+
+    <span class="tok-kd">public</span> <span class="tok-n">Sprites</span> <span class="tok-nf">getSprites</span><span class="tok-o">()</span> <span class="tok-o">{</span>
+        <span class="tok-k">return</span> <span class="tok-n">sprites</span><span class="tok-o">;</span>
+    <span class="tok-o">}</span>
+    <i class="conum" data-value="3"></i><b>(3)</b>
+    <span class="tok-kd">public</span> <span class="tok-kd">class</span> <span class="tok-nc">Sprites</span><span class="tok-o">{</span>
+        <span class="tok-kd">private</span> <span class="tok-n">String</span> <span class="tok-n">front_default</span><span class="tok-o">;</span>
+
+        <span class="tok-kd">public</span> <span class="tok-n">String</span> <span class="tok-nf">getFront_default</span><span class="tok-o">()</span> <span class="tok-o">{</span>
+            <span class="tok-k">return</span> <span class="tok-n">front_default</span><span class="tok-o">;</span>
+        <span class="tok-o">}</span>
+    <span class="tok-o">}</span>
+
+<span class="tok-o">}</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>On sélectionne les champs "id", "name", et "sprites"</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>On a besoin des getters par la suite</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Pour les objets imbriqués, on utilise une classe interne (on pourrait utiliser une classe externe aussi !)</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_le_pokemonrepository"><a class="anchor" href="#_le_pokemonrepository"></a><a class="link" href="#_le_pokemonrepository">5.2. Le PokemonRepository</a></h3>
+<div class="paragraph">
+<p>Le repository est donc la classe qui va appeler l&#8217;API <a href="https://pokeapi.co" class="bare">https://pokeapi.co</a>, en fonction de paramètres,
+et retourner notre Pokemon.</p>
+</div>
+<div class="paragraph">
+<p>Le repository va utiliser :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>L&#8217;API HttpClient du JDK 11 pour exécuter les requêtes HTTP</p>
+</li>
+<li>
+<p>L&#8217;API jackson-databind pour convertir le JSON retourné par <a href="https://pokeapi.co" class="bare">https://pokeapi.co</a> en objet Java</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="_jackson_databind"><a class="anchor" href="#_jackson_databind"></a><a class="link" href="#_jackson_databind">5.2.1. jackson-databind</a></h4>
+<div class="paragraph">
+<p>Ajouter la dépendance suivante à votre projet :</p>
+</div>
+<div class="listingblock">
+<div class="title">pom.xml</div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="xml"><span class="tok-nt">&lt;dependency&gt;</span>
+    <span class="tok-nt">&lt;groupId&gt;</span>com.fasterxml.jackson.core<span class="tok-nt">&lt;/groupId&gt;</span>
+    <span class="tok-nt">&lt;artifactId&gt;</span>jackson-databind<span class="tok-nt">&lt;/artifactId&gt;</span>
+    <span class="tok-nt">&lt;version&gt;</span>2.9.7<span class="tok-nt">&lt;/version&gt;</span>
+<span class="tok-nt">&lt;/dependency&gt;</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Ecrire un test unitaire pour apprendre à manipuler <em>jackson-databind</em> :</p>
+</div>
+<div class="listingblock">
+<div class="title">JacksonDatabindTest.java</div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="java"><span class="tok-kd">class</span> <span class="tok-nc">JacksonDatabindTest</span> <span class="tok-o">{</span>
+
+    <span class="tok-kd">public</span> <span class="tok-kd">static</span> <span class="tok-kd">class</span> <span class="tok-nc">Car</span> <span class="tok-o">{</span> <i class="conum" data-value="1"></i><b>(1)</b>
+        <span class="tok-kd">public</span> <span class="tok-n">String</span> <span class="tok-n">color</span><span class="tok-o">;</span>
+        <span class="tok-kd">public</span> <span class="tok-n">String</span> <span class="tok-n">brand</span><span class="tok-o">;</span>
+    <span class="tok-o">}</span>
+
+    <span class="tok-nd">@Test</span>
+    <span class="tok-kt">void</span> <span class="tok-nf">testWriteJson</span><span class="tok-o">()</span> <span class="tok-kd">throws</span> <span class="tok-n">JsonProcessingException</span> <span class="tok-o">{</span> <i class="conum" data-value="2"></i><b>(2)</b>
+        <span class="tok-n">var</span> <span class="tok-n">objectMapper</span> <span class="tok-o">=</span> <span class="tok-k">new</span> <span class="tok-n">ObjectMapper</span><span class="tok-o">();</span>
+        <span class="tok-n">var</span> <span class="tok-n">car</span> <span class="tok-o">=</span> <span class="tok-k">new</span> <span class="tok-n">Car</span><span class="tok-o">();</span>
+        <span class="tok-n">car</span><span class="tok-o">.</span><span class="tok-na">color</span> <span class="tok-o">=</span> <span class="tok-s">&quot;yellow&quot;</span><span class="tok-o">;</span>
+        <span class="tok-n">car</span><span class="tok-o">.</span><span class="tok-na">brand</span> <span class="tok-o">=</span> <span class="tok-s">&quot;renault&quot;</span><span class="tok-o">;</span>
+        <span class="tok-n">var</span> <span class="tok-n">json</span> <span class="tok-o">=</span> <span class="tok-n">objectMapper</span><span class="tok-o">.</span><span class="tok-na">writeValueAsString</span><span class="tok-o">(</span><span class="tok-n">car</span><span class="tok-o">);</span>
+        <span class="tok-n">assertEquals</span><span class="tok-o">(</span><span class="tok-s">&quot;{\&quot;color\&quot;:\&quot;yellow\&quot;,\&quot;brand\&quot;:\&quot;renault\&quot;}&quot;</span><span class="tok-o">,</span> <span class="tok-n">json</span><span class="tok-o">);</span>
+    <span class="tok-o">}</span>
+
+    <span class="tok-nd">@Test</span>
+    <span class="tok-kt">void</span> <span class="tok-nf">testReadJson</span><span class="tok-o">()</span> <span class="tok-kd">throws</span> <span class="tok-n">IOException</span> <span class="tok-o">{</span> <i class="conum" data-value="3"></i><b>(3)</b>
+        <span class="tok-n">var</span> <span class="tok-n">objectMapper</span> <span class="tok-o">=</span> <span class="tok-k">new</span> <span class="tok-n">ObjectMapper</span><span class="tok-o">();</span>
+        <span class="tok-n">var</span> <span class="tok-n">json</span> <span class="tok-o">=</span> <span class="tok-s">&quot;{ \&quot;color\&quot; : \&quot;black\&quot;, \&quot;brand\&quot; : \&quot;opel\&quot; }&quot;</span><span class="tok-o">;</span>
+        <span class="tok-n">var</span> <span class="tok-n">car</span> <span class="tok-o">=</span> <span class="tok-n">objectMapper</span><span class="tok-o">.</span><span class="tok-na">readValue</span><span class="tok-o">(</span><span class="tok-n">json</span><span class="tok-o">,</span> <span class="tok-n">Car</span><span class="tok-o">.</span><span class="tok-na">class</span><span class="tok-o">);</span>
+        <span class="tok-n">assertEquals</span><span class="tok-o">(</span><span class="tok-s">&quot;black&quot;</span><span class="tok-o">,</span> <span class="tok-n">car</span><span class="tok-o">.</span><span class="tok-na">color</span><span class="tok-o">);</span>
+        <span class="tok-n">assertEquals</span><span class="tok-o">(</span><span class="tok-s">&quot;opel&quot;</span><span class="tok-o">,</span> <span class="tok-n">car</span><span class="tok-o">.</span><span class="tok-na">brand</span><span class="tok-o">);</span>
+    <span class="tok-o">}</span>
+
+<span class="tok-o">}</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>La classe qui représente nos données</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>L&#8217;écriture de JSON depuis notre objet</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>La lecture d&#8217;un JSON pour reconstruire un objet</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Plus d&#8217;infos sur le <a href="https://github.com/FasterXML/jackson-databind">Github</a> de jackson-databind</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Dans la DispatcherServlet, on peut utiliser jackson-databind pour transformer le résultat de nos appels de controllers en JSON !
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_httpclient"><a class="anchor" href="#_httpclient"></a><a class="link" href="#_httpclient">5.2.2. HttpClient</a></h4>
+<div class="paragraph">
+<p>La documentation <a href="http://openjdk.java.net/groups/net/httpclient/intro.html">ici</a> et un bon article <a href="https://dzone.com/articles/java-11-standardized-http-client-api">là</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_les_tests_unitaires_du_repository"><a class="anchor" href="#_les_tests_unitaires_du_repository"></a><a class="link" href="#_les_tests_unitaires_du_repository">5.2.3. Les tests unitaires du repository</a></h4>
+<div class="paragraph">
+<p>Comme pour la <code>DispatcherServlet</code>, nous allons travailler en TDD.</p>
+</div>
+<div class="paragraph">
+<p>Voici la classe de teests unitaires à implémenter</p>
+</div>
+<div class="listingblock">
+<div class="title">PokemonRepositoryTest.java</div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="java"><span class="tok-kd">class</span> <span class="tok-nc">PokemonRepositoryTest</span> <span class="tok-o">{</span>
+
+    <span class="tok-nd">@Test</span> <i class="conum" data-value="1"></i><b>(1)</b>
+    <span class="tok-kt">void</span> <span class="tok-nf">getPokemon_callsHttpClientApi</span><span class="tok-o">()</span> <span class="tok-kd">throws</span> <span class="tok-n">IOException</span><span class="tok-o">,</span> <span class="tok-n">InterruptedException</span> <span class="tok-o">{</span>
+        <span class="tok-n">var</span> <span class="tok-n">repo</span> <span class="tok-o">=</span> <span class="tok-k">new</span> <span class="tok-n">PokemonRepository</span><span class="tok-o">();</span>
+
+        <span class="tok-n">var</span> <span class="tok-n">httpClient</span> <span class="tok-o">=</span> <span class="tok-n">mock</span><span class="tok-o">(</span><span class="tok-n">HttpClient</span><span class="tok-o">.</span><span class="tok-na">class</span><span class="tok-o">);</span>
+        <span class="tok-n">var</span> <span class="tok-n">objectMapper</span> <span class="tok-o">=</span> <span class="tok-n">mock</span><span class="tok-o">(</span><span class="tok-n">ObjectMapper</span><span class="tok-o">.</span><span class="tok-na">class</span><span class="tok-o">);</span>
+
+        <span class="tok-n">repo</span><span class="tok-o">.</span><span class="tok-na">setHttpClient</span><span class="tok-o">(</span><span class="tok-n">httpClient</span><span class="tok-o">);</span>
+        <span class="tok-n">repo</span><span class="tok-o">.</span><span class="tok-na">setObjectMapper</span><span class="tok-o">(</span><span class="tok-n">objectMapper</span><span class="tok-o">);</span>
+
+        <span class="tok-n">var</span> <span class="tok-n">httpResponse</span> <span class="tok-o">=</span> <span class="tok-n">mock</span><span class="tok-o">(</span><span class="tok-n">HttpResponse</span><span class="tok-o">.</span><span class="tok-na">class</span><span class="tok-o">);</span>
+        <span class="tok-n">when</span><span class="tok-o">(</span><span class="tok-n">httpClient</span><span class="tok-o">.</span><span class="tok-na">send</span><span class="tok-o">(</span><span class="tok-n">any</span><span class="tok-o">(),</span> <span class="tok-n">any</span><span class="tok-o">())).</span><span class="tok-na">thenReturn</span><span class="tok-o">(</span><span class="tok-n">httpResponse</span><span class="tok-o">);</span>
+        <span class="tok-n">when</span><span class="tok-o">(</span><span class="tok-n">httpResponse</span><span class="tok-o">.</span><span class="tok-na">statusCode</span><span class="tok-o">()).</span><span class="tok-na">thenReturn</span><span class="tok-o">(</span><span class="tok-mi">200</span><span class="tok-o">);</span>
+        <span class="tok-n">when</span><span class="tok-o">(</span><span class="tok-n">httpResponse</span><span class="tok-o">.</span><span class="tok-na">body</span><span class="tok-o">()).</span><span class="tok-na">thenReturn</span><span class="tok-o">(</span><span class="tok-s">&quot;{\&quot;id\&quot;:\&quot;25\&quot;,\&quot;name\&quot;:\&quot;pikachu\&quot;}&quot;</span><span class="tok-o">);</span>
+
+        <span class="tok-n">repo</span><span class="tok-o">.</span><span class="tok-na">getPokemonFromId</span><span class="tok-o">(</span><span class="tok-mi">25</span><span class="tok-o">);</span>
+
+        <span class="tok-n">var</span> <span class="tok-n">httpRequestCaptor</span> <span class="tok-o">=</span> <span class="tok-n">ArgumentCaptor</span><span class="tok-o">.</span><span class="tok-na">forClass</span><span class="tok-o">(</span><span class="tok-n">HttpRequest</span><span class="tok-o">.</span><span class="tok-na">class</span><span class="tok-o">);</span>
+        <span class="tok-n">verify</span><span class="tok-o">(</span><span class="tok-n">httpClient</span><span class="tok-o">).</span><span class="tok-na">send</span><span class="tok-o">(</span><span class="tok-n">httpRequestCaptor</span><span class="tok-o">.</span><span class="tok-na">capture</span><span class="tok-o">(),</span> <span class="tok-n">eq</span><span class="tok-o">(</span><span class="tok-n">HttpResponse</span><span class="tok-o">.</span><span class="tok-na">BodyHandlers</span><span class="tok-o">.</span><span class="tok-na">ofString</span><span class="tok-o">()));</span>
+
+        <span class="tok-n">var</span> <span class="tok-n">httpRequest</span> <span class="tok-o">=</span> <span class="tok-n">httpRequestCaptor</span><span class="tok-o">.</span><span class="tok-na">getValue</span><span class="tok-o">();</span>
+        <span class="tok-n">assertEquals</span><span class="tok-o">(</span><span class="tok-s">&quot;GET&quot;</span><span class="tok-o">,</span> <span class="tok-n">httpRequest</span><span class="tok-o">.</span><span class="tok-na">method</span><span class="tok-o">());</span>
+        <span class="tok-n">assertEquals</span><span class="tok-o">(</span><span class="tok-s">&quot;https://pokeapi.co/api/v2/pokemon/25&quot;</span><span class="tok-o">,</span> <span class="tok-n">httpRequest</span><span class="tok-o">.</span><span class="tok-na">uri</span><span class="tok-o">().</span><span class="tok-na">toString</span><span class="tok-o">());</span>
+
+        <span class="tok-n">verify</span><span class="tok-o">(</span><span class="tok-n">objectMapper</span><span class="tok-o">).</span><span class="tok-na">readValue</span><span class="tok-o">(</span><span class="tok-s">&quot;{\&quot;id\&quot;:\&quot;25\&quot;,\&quot;name\&quot;:\&quot;pikachu\&quot;}&quot;</span><span class="tok-o">,</span> <span class="tok-n">Pokemon</span><span class="tok-o">.</span><span class="tok-na">class</span><span class="tok-o">);</span>
+    <span class="tok-o">}</span>
+
+    <span class="tok-nd">@Test</span>
+    <span class="tok-kt">void</span> <span class="tok-nf">getPokemon_callsHttpClientName</span><span class="tok-o">()</span> <span class="tok-kd">throws</span> <span class="tok-n">IOException</span><span class="tok-o">,</span> <span class="tok-n">InterruptedException</span> <span class="tok-o">{</span>
+        <span class="tok-n">var</span> <span class="tok-n">repo</span> <span class="tok-o">=</span> <span class="tok-k">new</span> <span class="tok-n">PokemonRepository</span><span class="tok-o">();</span>
+
+        <span class="tok-n">var</span> <span class="tok-n">httpClient</span> <span class="tok-o">=</span> <span class="tok-n">mock</span><span class="tok-o">(</span><span class="tok-n">HttpClient</span><span class="tok-o">.</span><span class="tok-na">class</span><span class="tok-o">);</span>
+        <span class="tok-n">var</span> <span class="tok-n">objectMapper</span> <span class="tok-o">=</span> <span class="tok-n">mock</span><span class="tok-o">(</span><span class="tok-n">ObjectMapper</span><span class="tok-o">.</span><span class="tok-na">class</span><span class="tok-o">);</span>
+
+        <span class="tok-n">repo</span><span class="tok-o">.</span><span class="tok-na">setHttpClient</span><span class="tok-o">(</span><span class="tok-n">httpClient</span><span class="tok-o">);</span>
+        <span class="tok-n">repo</span><span class="tok-o">.</span><span class="tok-na">setObjectMapper</span><span class="tok-o">(</span><span class="tok-n">objectMapper</span><span class="tok-o">);</span>
+
+        <span class="tok-n">var</span> <span class="tok-n">httpResponse</span> <span class="tok-o">=</span> <span class="tok-n">mock</span><span class="tok-o">(</span><span class="tok-n">HttpResponse</span><span class="tok-o">.</span><span class="tok-na">class</span><span class="tok-o">);</span>
+        <span class="tok-n">when</span><span class="tok-o">(</span><span class="tok-n">httpClient</span><span class="tok-o">.</span><span class="tok-na">send</span><span class="tok-o">(</span><span class="tok-n">any</span><span class="tok-o">(),</span> <span class="tok-n">any</span><span class="tok-o">())).</span><span class="tok-na">thenReturn</span><span class="tok-o">(</span><span class="tok-n">httpResponse</span><span class="tok-o">);</span>
+        <span class="tok-n">when</span><span class="tok-o">(</span><span class="tok-n">httpResponse</span><span class="tok-o">.</span><span class="tok-na">statusCode</span><span class="tok-o">()).</span><span class="tok-na">thenReturn</span><span class="tok-o">(</span><span class="tok-mi">200</span><span class="tok-o">);</span>
+        <span class="tok-n">when</span><span class="tok-o">(</span><span class="tok-n">httpResponse</span><span class="tok-o">.</span><span class="tok-na">body</span><span class="tok-o">()).</span><span class="tok-na">thenReturn</span><span class="tok-o">(</span><span class="tok-s">&quot;{\&quot;id\&quot;:\&quot;145\&quot;,\&quot;name\&quot;:\&quot;zapdos\&quot;}&quot;</span><span class="tok-o">);</span>
+
+        <span class="tok-n">repo</span><span class="tok-o">.</span><span class="tok-na">getPokemonFromName</span><span class="tok-o">(</span><span class="tok-s">&quot;zapdos&quot;</span><span class="tok-o">);</span>
+
+        <span class="tok-n">var</span> <span class="tok-n">httpRequestCaptor</span> <span class="tok-o">=</span> <span class="tok-n">ArgumentCaptor</span><span class="tok-o">.</span><span class="tok-na">forClass</span><span class="tok-o">(</span><span class="tok-n">HttpRequest</span><span class="tok-o">.</span><span class="tok-na">class</span><span class="tok-o">);</span>
+        <span class="tok-n">verify</span><span class="tok-o">(</span><span class="tok-n">httpClient</span><span class="tok-o">).</span><span class="tok-na">send</span><span class="tok-o">(</span><span class="tok-n">httpRequestCaptor</span><span class="tok-o">.</span><span class="tok-na">capture</span><span class="tok-o">(),</span> <span class="tok-n">eq</span><span class="tok-o">(</span><span class="tok-n">HttpResponse</span><span class="tok-o">.</span><span class="tok-na">BodyHandlers</span><span class="tok-o">.</span><span class="tok-na">ofString</span><span class="tok-o">()));</span>
+
+        <span class="tok-n">var</span> <span class="tok-n">httpRequest</span> <span class="tok-o">=</span> <span class="tok-n">httpRequestCaptor</span><span class="tok-o">.</span><span class="tok-na">getValue</span><span class="tok-o">();</span>
+        <span class="tok-n">assertEquals</span><span class="tok-o">(</span><span class="tok-s">&quot;GET&quot;</span><span class="tok-o">,</span> <span class="tok-n">httpRequest</span><span class="tok-o">.</span><span class="tok-na">method</span><span class="tok-o">());</span>
+        <span class="tok-n">assertEquals</span><span class="tok-o">(</span><span class="tok-s">&quot;https://pokeapi.co/api/v2/pokemon/zapdos&quot;</span><span class="tok-o">,</span> <span class="tok-n">httpRequest</span><span class="tok-o">.</span><span class="tok-na">uri</span><span class="tok-o">().</span><span class="tok-na">toString</span><span class="tok-o">());</span>
+
+        <span class="tok-n">verify</span><span class="tok-o">(</span><span class="tok-n">objectMapper</span><span class="tok-o">).</span><span class="tok-na">readValue</span><span class="tok-o">(</span><span class="tok-s">&quot;{\&quot;id\&quot;:\&quot;145\&quot;,\&quot;name\&quot;:\&quot;zapdos\&quot;}&quot;</span><span class="tok-o">,</span> <span class="tok-n">Pokemon</span><span class="tok-o">.</span><span class="tok-na">class</span><span class="tok-o">);</span>
+    <span class="tok-o">}</span>
+
+    <span class="tok-nd">@Test</span>
+    <span class="tok-kt">void</span> <span class="tok-nf">getPokemonFromId</span><span class="tok-o">()</span> <span class="tok-o">{</span> <i class="conum" data-value="2"></i><b>(2)</b>
+        <span class="tok-n">var</span> <span class="tok-n">repo</span> <span class="tok-o">=</span> <span class="tok-k">new</span> <span class="tok-n">PokemonRepository</span><span class="tok-o">();</span>
+        <span class="tok-n">var</span> <span class="tok-n">pokemon</span> <span class="tok-o">=</span> <span class="tok-n">repo</span><span class="tok-o">.</span><span class="tok-na">getPokemonFromId</span><span class="tok-o">(</span><span class="tok-mi">25</span><span class="tok-o">);</span>
+
+        <span class="tok-n">assertEquals</span><span class="tok-o">(</span><span class="tok-mi">25</span><span class="tok-o">,</span> <span class="tok-n">pokemon</span><span class="tok-o">.</span><span class="tok-na">getId</span><span class="tok-o">());</span>
+        <span class="tok-n">assertEquals</span><span class="tok-o">(</span><span class="tok-s">&quot;pikachu&quot;</span><span class="tok-o">,</span> <span class="tok-n">pokemon</span><span class="tok-o">.</span><span class="tok-na">getName</span><span class="tok-o">());</span>
+        <span class="tok-n">assertEquals</span><span class="tok-o">(</span><span class="tok-s">&quot;https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png&quot;</span><span class="tok-o">,</span> <span class="tok-n">pokemon</span><span class="tok-o">.</span><span class="tok-na">getSprites</span><span class="tok-o">().</span><span class="tok-na">getFront_default</span><span class="tok-o">());</span>
+    <span class="tok-o">}</span>
+
+    <span class="tok-nd">@Test</span>
+    <span class="tok-kt">void</span> <span class="tok-nf">getPokemonFromName</span><span class="tok-o">()</span> <span class="tok-o">{</span> <i class="conum" data-value="3"></i><b>(3)</b>
+        <span class="tok-n">var</span> <span class="tok-n">repo</span> <span class="tok-o">=</span> <span class="tok-k">new</span> <span class="tok-n">PokemonRepository</span><span class="tok-o">();</span>
+        <span class="tok-n">var</span> <span class="tok-n">pokemon</span> <span class="tok-o">=</span> <span class="tok-n">repo</span><span class="tok-o">.</span><span class="tok-na">getPokemonFromName</span><span class="tok-o">(</span><span class="tok-s">&quot;zapdos&quot;</span><span class="tok-o">);</span>
+
+        <span class="tok-n">assertEquals</span><span class="tok-o">(</span><span class="tok-mi">145</span><span class="tok-o">,</span> <span class="tok-n">pokemon</span><span class="tok-o">.</span><span class="tok-na">getId</span><span class="tok-o">());</span>
+        <span class="tok-n">assertEquals</span><span class="tok-o">(</span><span class="tok-s">&quot;zapdos&quot;</span><span class="tok-o">,</span> <span class="tok-n">pokemon</span><span class="tok-o">.</span><span class="tok-na">getName</span><span class="tok-o">());</span>
+        <span class="tok-n">assertEquals</span><span class="tok-o">(</span><span class="tok-s">&quot;https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/145.png&quot;</span><span class="tok-o">,</span> <span class="tok-n">pokemon</span><span class="tok-o">.</span><span class="tok-na">getSprites</span><span class="tok-o">().</span><span class="tok-na">getFront_default</span><span class="tok-o">());</span>
+    <span class="tok-o">}</span>
+<span class="tok-o">}</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Ce test valide que l&#8217;API HttpClient est correctement manipulée</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>On valide la récupération d&#8217;un pokemon par son id</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>et par son nom</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_le_pokemonrepository_2"><a class="anchor" href="#_le_pokemonrepository_2"></a><a class="link" href="#_le_pokemonrepository_2">5.2.4. Le PokemonRepository</a></h4>
+<div class="paragraph">
+<p>Et voici la classe du repository, à compléter !</p>
+</div>
+<div class="listingblock">
+<div class="title">PokemonRepository.java</div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="java"><span class="tok-kd">public</span> <span class="tok-kd">class</span> <span class="tok-nc">PokemonRepository</span> <span class="tok-o">{</span>
+
+    <span class="tok-kd">private</span> <span class="tok-n">HttpClient</span> <span class="tok-n">httpClient</span><span class="tok-o">;</span> <i class="conum" data-value="1"></i><b>(1)</b>
+
+    <span class="tok-kd">private</span> <span class="tok-n">ObjectMapper</span> <span class="tok-n">objectMapper</span><span class="tok-o">;</span> <i class="conum" data-value="2"></i><b>(2)</b>
+
+    <span class="tok-kd">public</span> <span class="tok-nf">PokemonRepository</span><span class="tok-o">(){</span>
+        <span class="tok-n">httpClient</span> <span class="tok-o">=</span> <span class="tok-n">HttpClient</span><span class="tok-o">.</span><span class="tok-na">newBuilder</span><span class="tok-o">()</span> <i class="conum" data-value="1"></i><b>(1)</b>
+            <span class="tok-o">.</span><span class="tok-na">followRedirects</span><span class="tok-o">(</span><span class="tok-n">HttpClient</span><span class="tok-o">.</span><span class="tok-na">Redirect</span><span class="tok-o">.</span><span class="tok-na">ALWAYS</span><span class="tok-o">)</span> <i class="conum" data-value="1"></i><b>(1)</b>
+            <span class="tok-o">.</span><span class="tok-na">build</span><span class="tok-o">();</span>
+
+        <span class="tok-n">objectMapper</span> <span class="tok-o">=</span> <span class="tok-k">new</span> <span class="tok-n">ObjectMapper</span><span class="tok-o">();</span>
+        <span class="tok-n">objectMapper</span><span class="tok-o">.</span><span class="tok-na">configure</span><span class="tok-o">(</span><span class="tok-n">DeserializationFeature</span><span class="tok-o">.</span><span class="tok-na">FAIL_ON_UNKNOWN_PROPERTIES</span><span class="tok-o">,</span> <span class="tok-kc">false</span><span class="tok-o">);</span> <i class="conum" data-value="2"></i><b>(2)</b>
+    <span class="tok-o">}</span>
+
+    <span class="tok-kd">public</span> <span class="tok-n">Pokemon</span> <span class="tok-nf">getPokemonFromId</span><span class="tok-o">(</span><span class="tok-kt">int</span> <span class="tok-n">id</span><span class="tok-o">){</span>
+        <span class="tok-n">System</span><span class="tok-o">.</span><span class="tok-na">out</span><span class="tok-o">.</span><span class="tok-na">println</span><span class="tok-o">(</span><span class="tok-s">&quot;Loading Pokemon information for Pokemon id &quot;</span> <span class="tok-o">+</span> <span class="tok-n">id</span><span class="tok-o">);</span>
+
+        <span class="tok-c1">// TODO</span>
+    <span class="tok-o">}</span>
+
+    <span class="tok-kd">public</span> <span class="tok-n">Pokemon</span> <span class="tok-nf">getPokemonFromName</span><span class="tok-o">(</span><span class="tok-n">String</span> <span class="tok-n">name</span><span class="tok-o">){</span>
+        <span class="tok-n">System</span><span class="tok-o">.</span><span class="tok-na">out</span><span class="tok-o">.</span><span class="tok-na">println</span><span class="tok-o">(</span><span class="tok-s">&quot;Loading Pokemon information for Pokemon name &quot;</span> <span class="tok-o">+</span> <span class="tok-n">name</span><span class="tok-o">);</span>
+
+        <span class="tok-c1">// TODO</span>
+    <span class="tok-o">}</span>
+
+    <span class="tok-kd">public</span> <span class="tok-kt">void</span> <span class="tok-nf">setHttpClient</span><span class="tok-o">(</span><span class="tok-n">HttpClient</span> <span class="tok-n">httpClient</span><span class="tok-o">)</span> <span class="tok-o">{</span>
+        <span class="tok-k">this</span><span class="tok-o">.</span><span class="tok-na">httpClient</span> <span class="tok-o">=</span> <span class="tok-n">httpClient</span><span class="tok-o">;</span>
+    <span class="tok-o">}</span>
+
+    <span class="tok-kd">public</span> <span class="tok-kt">void</span> <span class="tok-nf">setObjectMapper</span><span class="tok-o">(</span><span class="tok-n">ObjectMapper</span> <span class="tok-n">objectMapper</span><span class="tok-o">)</span> <span class="tok-o">{</span>
+        <span class="tok-k">this</span><span class="tok-o">.</span><span class="tok-na">objectMapper</span> <span class="tok-o">=</span> <span class="tok-n">objectMapper</span><span class="tok-o">;</span>
+    <span class="tok-o">}</span>
+<span class="tok-o">}</span></code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_le_pokemoncontroller"><a class="anchor" href="#_le_pokemoncontroller"></a><a class="link" href="#_le_pokemoncontroller">5.2.5. Le PokemonController</a></h4>
+<div class="paragraph">
+<p>Ecrire un controller qui expose une route "/pokemon".
+Cette route pourra être appelée avec des paramètres éventuels, <code>id</code> ou <code>name</code>.</p>
+</div>
+<div class="paragraph">
+<p>Les requêtes devant être implémentées sont donc, par exemple :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://localhost:8080/pokemon?id=25" class="bare">http://localhost:8080/pokemon?id=25</a></p>
+</li>
+<li>
+<p><a href="http://localhost:8080/pokemon?id=145" class="bare">http://localhost:8080/pokemon?id=145</a></p>
+</li>
+<li>
+<p><a href="http://localhost:8080/pokemon?name=pikachu" class="bare">http://localhost:8080/pokemon?name=pikachu</a></p>
+</li>
+<li>
+<p><a href="http://localhost:8080/pokemon?name=zapdos" class="bare">http://localhost:8080/pokemon?name=zapdos</a></p>
+</li>
+</ul>
+</div>
+<div class="sect4">
+<h5 id="_les_tests_unitaires_du_pokemoncontroller"><a class="anchor" href="#_les_tests_unitaires_du_pokemoncontroller"></a><a class="link" href="#_les_tests_unitaires_du_pokemoncontroller">Les tests unitaires du PokemonController</a></h5>
+<div class="paragraph">
+<p>Implémenter les tests unitaires suivants :</p>
+</div>
+<div class="listingblock">
+<div class="title">PokemonController.java</div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="java"><span class="tok-kd">class</span> <span class="tok-nc">PokemonControllerTest</span> <span class="tok-o">{</span>
+
+    <span class="tok-nd">@InjectMocks</span>
+    <span class="tok-n">PokemonController</span> <span class="tok-n">controller</span><span class="tok-o">;</span>
+
+    <span class="tok-nd">@Mock</span>
+    <span class="tok-n">PokemonRepository</span> <span class="tok-n">pokemonRepository</span><span class="tok-o">;</span>
+
+    <span class="tok-nd">@BeforeEach</span>
+    <span class="tok-kt">void</span> <span class="tok-nf">init</span><span class="tok-o">(){</span>
+        <span class="tok-n">MockitoAnnotations</span><span class="tok-o">.</span><span class="tok-na">initMocks</span><span class="tok-o">(</span><span class="tok-k">this</span><span class="tok-o">);</span>
+    <span class="tok-o">}</span>
+
+    <span class="tok-nd">@Test</span>
+    <span class="tok-kt">void</span> <span class="tok-nf">getPokemon_shouldRequireAParameter</span><span class="tok-o">(){</span>
+        <span class="tok-n">var</span> <span class="tok-n">exception</span> <span class="tok-o">=</span> <span class="tok-n">assertThrows</span><span class="tok-o">(</span><span class="tok-n">IllegalArgumentException</span><span class="tok-o">.</span><span class="tok-na">class</span><span class="tok-o">,</span> <span class="tok-o">()</span> <span class="tok-o">-&gt;</span> <span class="tok-n">controller</span><span class="tok-o">.</span><span class="tok-na">getPokemon</span><span class="tok-o">(</span><span class="tok-kc">null</span><span class="tok-o">));</span>
+        <span class="tok-n">assertEquals</span><span class="tok-o">(</span><span class="tok-s">&quot;parameters should not be empty&quot;</span><span class="tok-o">,</span> <span class="tok-n">exception</span><span class="tok-o">.</span><span class="tok-na">getMessage</span><span class="tok-o">());</span>
+    <span class="tok-o">}</span>
+
+    <span class="tok-nd">@Test</span>
+    <span class="tok-kt">void</span> <span class="tok-nf">getPokemon_shouldRequireAKnownParameter</span><span class="tok-o">(){</span>
+        <span class="tok-n">var</span> <span class="tok-n">parameters</span> <span class="tok-o">=</span> <span class="tok-n">Map</span><span class="tok-o">.</span><span class="tok-na">of</span><span class="tok-o">(</span><span class="tok-s">&quot;test&quot;</span><span class="tok-o">,</span> <span class="tok-k">new</span> <span class="tok-n">String</span><span class="tok-o">[]{</span><span class="tok-s">&quot;25&quot;</span><span class="tok-o">});</span>
+        <span class="tok-n">var</span> <span class="tok-n">exception</span> <span class="tok-o">=</span> <span class="tok-n">assertThrows</span><span class="tok-o">(</span><span class="tok-n">IllegalArgumentException</span><span class="tok-o">.</span><span class="tok-na">class</span><span class="tok-o">,</span> <span class="tok-o">()</span> <span class="tok-o">-&gt;</span> <span class="tok-n">controller</span><span class="tok-o">.</span><span class="tok-na">getPokemon</span><span class="tok-o">(</span><span class="tok-n">parameters</span><span class="tok-o">));</span>
+        <span class="tok-n">assertEquals</span><span class="tok-o">(</span><span class="tok-s">&quot;unknown parameter&quot;</span><span class="tok-o">,</span> <span class="tok-n">exception</span><span class="tok-o">.</span><span class="tok-na">getMessage</span><span class="tok-o">());</span>
+    <span class="tok-o">}</span>
+
+    <span class="tok-nd">@Test</span>
+    <span class="tok-kt">void</span> <span class="tok-nf">getPokemon_withAnIdParameter_shouldReturnAPokemon</span><span class="tok-o">(){</span>
+        <span class="tok-n">var</span> <span class="tok-n">pikachu</span> <span class="tok-o">=</span> <span class="tok-k">new</span> <span class="tok-n">Pokemon</span><span class="tok-o">();</span>
+        <span class="tok-n">pikachu</span><span class="tok-o">.</span><span class="tok-na">setId</span><span class="tok-o">(</span><span class="tok-mi">25</span><span class="tok-o">);</span>
+        <span class="tok-n">pikachu</span><span class="tok-o">.</span><span class="tok-na">setName</span><span class="tok-o">(</span><span class="tok-s">&quot;pikachu&quot;</span><span class="tok-o">);</span>
+        <span class="tok-n">when</span><span class="tok-o">(</span><span class="tok-n">pokemonRepository</span><span class="tok-o">.</span><span class="tok-na">getPokemonFromId</span><span class="tok-o">(</span><span class="tok-mi">25</span><span class="tok-o">)).</span><span class="tok-na">thenReturn</span><span class="tok-o">(</span><span class="tok-n">pikachu</span><span class="tok-o">);</span>
+
+        <span class="tok-n">var</span> <span class="tok-n">parameters</span> <span class="tok-o">=</span> <span class="tok-n">Map</span><span class="tok-o">.</span><span class="tok-na">of</span><span class="tok-o">(</span><span class="tok-s">&quot;id&quot;</span><span class="tok-o">,</span> <span class="tok-k">new</span> <span class="tok-n">String</span><span class="tok-o">[]{</span><span class="tok-s">&quot;25&quot;</span><span class="tok-o">});</span>
+        <span class="tok-n">var</span> <span class="tok-n">pokemon</span> <span class="tok-o">=</span> <span class="tok-n">controller</span><span class="tok-o">.</span><span class="tok-na">getPokemon</span><span class="tok-o">(</span><span class="tok-n">parameters</span><span class="tok-o">);</span>
+        <span class="tok-n">assertNotNull</span><span class="tok-o">(</span><span class="tok-n">pokemon</span><span class="tok-o">);</span>
+        <span class="tok-n">assertEquals</span><span class="tok-o">(</span><span class="tok-mi">25</span><span class="tok-o">,</span> <span class="tok-n">pokemon</span><span class="tok-o">.</span><span class="tok-na">getId</span><span class="tok-o">());</span>
+        <span class="tok-n">assertEquals</span><span class="tok-o">(</span><span class="tok-s">&quot;pikachu&quot;</span><span class="tok-o">,</span> <span class="tok-n">pokemon</span><span class="tok-o">.</span><span class="tok-na">getName</span><span class="tok-o">());</span>
+
+        <span class="tok-n">verify</span><span class="tok-o">(</span><span class="tok-n">pokemonRepository</span><span class="tok-o">).</span><span class="tok-na">getPokemonFromId</span><span class="tok-o">(</span><span class="tok-mi">25</span><span class="tok-o">);</span>
+        <span class="tok-n">verifyNoMoreInteractions</span><span class="tok-o">(</span><span class="tok-n">pokemonRepository</span><span class="tok-o">);</span>
+    <span class="tok-o">}</span>
+
+    <span class="tok-nd">@Test</span>
+    <span class="tok-kt">void</span> <span class="tok-nf">getPokemon_withANameParameter_shouldReturnAPokemon</span><span class="tok-o">(){</span>
+        <span class="tok-n">var</span> <span class="tok-n">zapdos</span> <span class="tok-o">=</span> <span class="tok-k">new</span> <span class="tok-n">Pokemon</span><span class="tok-o">();</span>
+        <span class="tok-n">zapdos</span><span class="tok-o">.</span><span class="tok-na">setId</span><span class="tok-o">(</span><span class="tok-mi">145</span><span class="tok-o">);</span>
+        <span class="tok-n">zapdos</span><span class="tok-o">.</span><span class="tok-na">setName</span><span class="tok-o">(</span><span class="tok-s">&quot;zapdos&quot;</span><span class="tok-o">);</span>
+        <span class="tok-n">when</span><span class="tok-o">(</span><span class="tok-n">pokemonRepository</span><span class="tok-o">.</span><span class="tok-na">getPokemonFromName</span><span class="tok-o">(</span><span class="tok-s">&quot;zapdos&quot;</span><span class="tok-o">)).</span><span class="tok-na">thenReturn</span><span class="tok-o">(</span><span class="tok-n">zapdos</span><span class="tok-o">);</span>
+
+        <span class="tok-n">var</span> <span class="tok-n">parameters</span> <span class="tok-o">=</span> <span class="tok-n">Map</span><span class="tok-o">.</span><span class="tok-na">of</span><span class="tok-o">(</span><span class="tok-s">&quot;name&quot;</span><span class="tok-o">,</span> <span class="tok-k">new</span> <span class="tok-n">String</span><span class="tok-o">[]{</span><span class="tok-s">&quot;zapdos&quot;</span><span class="tok-o">});</span>
+        <span class="tok-n">var</span> <span class="tok-n">pokemon</span> <span class="tok-o">=</span> <span class="tok-n">controller</span><span class="tok-o">.</span><span class="tok-na">getPokemon</span><span class="tok-o">(</span><span class="tok-n">parameters</span><span class="tok-o">);</span>
+        <span class="tok-n">assertNotNull</span><span class="tok-o">(</span><span class="tok-n">pokemon</span><span class="tok-o">);</span>
+        <span class="tok-n">assertEquals</span><span class="tok-o">(</span><span class="tok-mi">145</span><span class="tok-o">,</span> <span class="tok-n">pokemon</span><span class="tok-o">.</span><span class="tok-na">getId</span><span class="tok-o">());</span>
+        <span class="tok-n">assertEquals</span><span class="tok-o">(</span><span class="tok-s">&quot;zapdos&quot;</span><span class="tok-o">,</span> <span class="tok-n">pokemon</span><span class="tok-o">.</span><span class="tok-na">getName</span><span class="tok-o">());</span>
+
+        <span class="tok-n">verify</span><span class="tok-o">(</span><span class="tok-n">pokemonRepository</span><span class="tok-o">).</span><span class="tok-na">getPokemonFromName</span><span class="tok-o">(</span><span class="tok-s">&quot;zapdos&quot;</span><span class="tok-o">);</span>
+        <span class="tok-n">verifyNoMoreInteractions</span><span class="tok-o">(</span><span class="tok-n">pokemonRepository</span><span class="tok-o">);</span>
+    <span class="tok-o">}</span>
+
+<span class="tok-o">}</span></code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_le_pokemoncontroller_code_à_trous"><a class="anchor" href="#_le_pokemoncontroller_code_à_trous"></a><a class="link" href="#_le_pokemoncontroller_code_à_trous">Le PokemonController (code à trous)</a></h5>
+<div class="paragraph">
+<p>Implémenter le PokemonController et compléter la méthode !</p>
+</div>
+<div class="listingblock">
+<div class="title">PokemonController.java</div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="java"><span class="tok-kd">public</span> <span class="tok-kd">class</span> <span class="tok-nc">PokemonController</span> <span class="tok-o">{</span>
+
+    <span class="tok-kd">private</span> <span class="tok-n">PokemonRepository</span> <span class="tok-n">repository</span> <span class="tok-o">=</span> <span class="tok-k">new</span> <span class="tok-n">PokemonRepository</span><span class="tok-o">();</span>
+
+    <span class="tok-kd">public</span> <span class="tok-n">Pokemon</span> <span class="tok-nf">getPokemon</span><span class="tok-o">(</span><span class="tok-n">Map</span><span class="tok-o">&lt;</span><span class="tok-n">String</span><span class="tok-o">,</span><span class="tok-n">String</span><span class="tok-o">[]&gt;</span> <span class="tok-n">parameters</span><span class="tok-o">){</span>
+        <span class="tok-c1">// TODO</span>
+    <span class="tok-o">}</span>
+
+<span class="tok-o">}</span></code></pre>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Peut-être faut-il ajouter des annotations java sur le controller pour l&#8217;enregistrer auprès de la <code>DispatcherServlet</code>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_modifications_de_la_dispatcherservlet"><a class="anchor" href="#_modifications_de_la_dispatcherservlet"></a><a class="link" href="#_modifications_de_la_dispatcherservlet">Modifications de la DispatcherServlet</a></h5>
+<div class="paragraph">
+<p>Enfin, pour finaliser notre développement, nous devons :</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Enregistrer notre <code>PokemonController</code> dans la <code>DispatcherServlet</code> (en modifiant la méthode <code>init</code> de la <code>DispatcherServlet</code>)</p>
+</li>
+<li>
+<p>Utiliser <code>jackson-databind</code> pour transformer les résultats de nos controlleurs en JSON</p>
+</li>
+<li>
+<p>Ne pas oublier de transmettre les paramètres reçus en requête au controlleur.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2018-11-04 17:30:32 CET
+</div>
+</div>
+</body>
+</html>
