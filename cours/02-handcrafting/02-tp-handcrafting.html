@@ -591,6 +591,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p>Et pour s&#8217;amuser un peu, nous allons réaliser un micro-service qui nous renvoie des données sur les Pokemons !</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/micro-service-poke.png" alt="micro service poke">
+</div>
+</div>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -610,7 +618,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>La déclaration des routeurs (express.Router)</p>
 </li>
 <li>
-<p>L&#8217;implémentation du code métier</p>
+<p>L&#8217;implémentation du code métier et les accès à une base de données</p>
 </li>
 </ul>
 </div>
@@ -1485,7 +1493,7 @@ pour être capable de router les requêtes HTTP, et récupérer les résultats</
         <span class="tok-c1">// TODO </span><i class="conum" data-value="2"></i><b>(2)</b>
     <span class="tok-o">}</span>
 
-    <span class="tok-kd">protected</span> <span class="tok-kt">void</span> <span class="tok-nf">registerMethod</span><span class="tok-o">(</span><span class="tok-n">Object</span> <span class="tok-n">controller</span><span class="tok-o">,</span> <span class="tok-n">Method</span> <span class="tok-n">method</span><span class="tok-o">)</span> <span class="tok-o">{</span>
+    <span class="tok-kd">protected</span> <span class="tok-kt">void</span> <span class="tok-nf">registerMethod</span><span class="tok-o">(</span><span class="tok-n">Method</span> <span class="tok-n">method</span><span class="tok-o">)</span> <span class="tok-o">{</span>
         <span class="tok-n">System</span><span class="tok-o">.</span><span class="tok-na">out</span><span class="tok-o">.</span><span class="tok-na">println</span><span class="tok-o">(</span><span class="tok-s">&quot;Registering method &quot;</span> <span class="tok-o">+</span> <span class="tok-n">method</span><span class="tok-o">.</span><span class="tok-na">getName</span><span class="tok-o">());</span>
 
         <span class="tok-c1">// TODO </span><i class="conum" data-value="2"></i><b>(2)</b>
@@ -2360,7 +2368,7 @@ Peut-être faut-il ajouter des annotations java sur le controller pour l&#8217;e
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-11-04 17:30:32 CET
+Last updated 2018-11-05 09:21:26 CET
 </div>
 </div>
 </body>
