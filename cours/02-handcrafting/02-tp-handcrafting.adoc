@@ -654,7 +654,7 @@ public class DispatcherServlet extends HttpServlet {
         // TODO <2>
     }
 
-    protected void registerMethod(Object controller, Method method) {
+    protected void registerMethod(Method method) {
         System.out.println("Registering method " + method.getName());
 
         // TODO <2>
