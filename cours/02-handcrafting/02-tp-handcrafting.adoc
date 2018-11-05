@@ -1291,3 +1291,7 @@ Enfin, pour finaliser notre développement, nous devons :
 1. Enregistrer notre `PokemonController` dans la `DispatcherServlet` (en modifiant la méthode `init` de la `DispatcherServlet`)
 2. Utiliser `jackson-databind` pour transformer les résultats de nos controlleurs en JSON
 3. Ne pas oublier de transmettre les paramètres reçus en requête au controlleur.
+
+== Corrigé
+
+Le corrigé de ce TP est disponible link:tp-02-handcrafting.tar.gz[ici]
